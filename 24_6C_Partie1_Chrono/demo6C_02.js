@@ -6,7 +6,7 @@
 // agrandit une photo pendant une interval de temps, puis la rapetisse à son format original
 function demarrerLesAnimations() {
 	// le titre alterne la classe classePourH1 du premier h1 à tous les 1 seconde
-
+    setInterval("alternerClasse('h1', 'classePourH1')", 1000);
 	// le titre alterne la classe imageAvecBordure de la première image à tous les 3 secondes
 
 }
