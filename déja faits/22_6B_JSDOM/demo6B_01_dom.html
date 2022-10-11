@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Démo 6B, #01</title>
+  <script>
+    // Fonction qui alterne la photo du moyen de transport entre l'avion et le bateau
+    // et change le texte du paragraphe au-dessous
+    function changerPhoto() { }
+
+    // Fonction qui affiche les attributs de l'image du moyen de transport
+    function afficherAttributs() { }
+
+    // Fonction qui affiche le contenu de tous les h2
+    function afficherH2() { }
+
+    // Fonction qui affiche le contenu de la barre d'adresse
+    function afficherAdresse() { }
+
+    // Fonction qui change la dimension des photos d'animaux
+    function changerDimensions(facteur) { }
+
+    // Fonction qui change le compteur
+    function additionnerCompteur(ajout) { }
+  </script>
+</head>
+
+<body onload="fct();">
+  <h1>Démo 4B #01</h1>
+
+  <h2>Moyen de transport</h2>
+  <img onclick="changerPhoto();" id="photoTransport" alt="transport" src="images/bateau.jpg" height="100" />
+  <p id="moyenTransport">Moyen de transport : Bateau</p>
+
+  <h2>Affichages ...</h2>
+  <input onclick="afficherAttributs();" type="button" value="Afficher attributs photo" />
+  <br />
+  <input onclick="afficherH2();" type="button" value="Afficher h2s contenu" />
+  <br />
+  <input onclick="afficherAdresse();" type="button" value="Afficher l'adresse" />
+
+  <h2>Animaux</h2>
+  <img class="imagesAnimaux" alt="pinguoin" src="images/pinguoin.jpg" height="100" />
+  <img class="imagesAnimaux" alt="girafe" src="images/girafe.jpg" height="100" />
+  <br />
+  <input onclick="changerDimensions(2.0);" type="button" value="Agrandir" />
+  <input onclick="changerDimensions(0.5);" type="button" value="Rapetisser" />
+
+  <h2>Compteur:6</h2>
+  <input onclick="additionnerCompteur(1);" type="button" value="+" />
+  <input onclick="additionnerCompteur(-1);" type="button" value="-" />
+</body>
+
+</html>

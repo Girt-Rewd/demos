@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- 
+	Démo3B #02
+	Familiarisation avec les propriété CSS pour contrôler le formatage du texte
+	Par  : Dini Ahamada
+-->
+<html lang="fr">
+<head>
+	<title>Démo 3B #02</title>
+	<meta  charset="UTF-8" />
+	<style rel="stylesheet">
+		body{font-family:Verdana;}
+		li{font-size:20px;margin-top:20px;}
+		h1{background-color:darkblue;color:white;width:100%;}
+		h3{background-color:lightgreen;width:500px;}
+		p{background-color:lightgray;width:700px; height:150px;font-size:20px;}
+		table, td, th {
+			border:2px black solid; 
+			border-collapse:collapse;
+			background-color: #EEEEEE;
+			padding:10px;
+		}
+		th {
+			background-color: #CCCCCC;
+			text-align:left;
+		}
+
+	</style>
+</head>
+<body>
+	<h1> Effets des propriétés CSS de modification de texte (balise span, attribut style)</h1>	
+	<table>
+		<tbody>
+			<tr>
+				<th>font-family</th> 
+				<td>
+					<span style="font-family:'Times New Roman';">Times New Roman</span>,
+					<span style="font-family:Arial;">Arial</span> 
+				</td>
+			</tr>
+			<tr>
+				<th> font-style</th>
+				<td>
+					<span style="font-style:italic;">italique</span>,
+					<span style="font-style:oblique;">oblique</span> 
+				</td>
+			</tr>
+			<tr>
+				<th> font-weight </th>
+				<td>
+					<span style="font-weight:bold;">bold</span>,
+					<span style="font-weight:bolder;">bolder</span>,
+					<span style="font-weight:200;">200</span>, 
+					<span style="font-weight:900;">900</span> 
+				</td>
+			</tr>
+			<tr>
+				<th> font-size</th>
+				<td>
+					<span style="font-size:10px;">10px</span>,
+					<span style="font-size:1.5em;">1.5em (1.5 fois texte de base)</span>
+				</td>
+			</tr>
+			<tr>
+				<th> text-decoration</th> 
+				<td>
+					<span style="text-decoration:underline;">souligné</span>,
+					<span style="text-decoration:overline;">surligné</span>, 
+					<span style="text-decoration:line-through;">biffé</span> 
+				</td>
+			</tr>
+			<tr>
+				<th> text-transform</th>
+				<td>
+					<span style="text-transform:uppercase;">texte en majuscules</span>,
+					<span style="text-transform:capitalize;">texte en "capitalize"</span>
+				</td>
+			</tr>
+			<tr>
+				<th> letter-spacing </th>
+				<td>
+					<span style="letter-spacing:0.1em;">espacements de 0.1em</span>,
+					<span style="letter-spacing:0.4em;">espacements de 0.4em</span>
+				</td>
+			</tr>
+			<tr>
+				<th> text-shadow</th>
+				<td>
+					<span style="text-shadow:2px 4px green;">ombrage 2px en x, 4px en y, couleur vert</span> 
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h1> Effets des propriétés CSS d'alignement de texte (balise span, attribut style)</h1>
+	<h3 style="text-align:left"> text-align: aligné à la gauche   </h3>
+	<h3 style="text-align:center"> text-align: aligné au centre   </h3>
+	<h3 style="text-align:right"> text-align: aligné à la droite </h3>
+
+	<h1> Effets des propriétés CSS d'espacement de texte et contrôle de débordement</h1>
+	<p style="line-height:30px;text-indent:40px;word-spacing:30px;overflow:hidden;">
+		Voici un paragraphe où l'indentation (début de paragraphe), l'espacement entre les lignes
+		entre les lignes et les mots ont été changés. Le texte qui dépasse sera caché.
+		Donc une partie de ce texte ne sera pas montrée, ne sera pas montrée, ne sera pas montrée, ne sera pas montrée, 
+	</p>
+	<p style="height:50px">
+		Voici un paragraphe sans les changement mentionnés au paragraphe précédent. Les valeurs sont 
+		celles par défaut,  et les dépassements ne sont pas traités (le texte va sortie de la boite)
+	</p>
+
+</body>
+</html>

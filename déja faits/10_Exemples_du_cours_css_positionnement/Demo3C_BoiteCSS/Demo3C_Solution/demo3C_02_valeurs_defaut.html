@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- 
+	Démo 3C #02 : Familiarisation avec les valeurs de marges par défaut
+	Date : 2020/02/09
+	Auteur : Dini Ahamada
+-->
+<html lang="fr">
+<head>
+	<title>Démo 3C #02</title>
+	<meta  charset="UTF-8" />
+
+	<style rel="stylesheet" style="text/css">
+		html  {background-color:black;  }
+		/************ par défaut body une marge de 8px ***************/
+		body  {background-color:lightgray;   }          
+		/************ par défaut div n'ont pas de marges *************/
+		.divA   {background-color:cyan;    height:50px }
+		.divB   {background-color:yellow;  height:50px } 
+		/************ par défaut p a une marge de 1em (en haut et en bas) ***************/
+		p     {background-color:lightgreen;} 
+		h1    {background-color:darkgreen;  color:white;    border:3px black solid;} 
+		h2    {background-color:green;                      border:3px black solid;} 
+		/************ décommentez pour enlevez les marges par défaut *******************/
+		/* * {margin:0px;} */
+	</style>
+
+</head>
+<body>
+	Le body en gris pâle a une marge de 8px par défaut.
+
+	<div class="divA">
+		DivisionA (pas de marges par défaut)
+	</div>
+
+	<div class="divB">
+		DivisionB (pas de marges par défaut)
+	</div>
+
+	<div class="divA">
+		DivisionA (pas de marges par défaut)
+	</div>
+
+	<h1>
+		Titre h1 (avec marge avant et après, mais pas sur les côté), la marge est en dehors de la bordure.
+	</h1>
+
+	<div class="divB">
+		DivisionB (pas de marges par défaut)
+	</div>
+
+	<h2>
+		Titre h2 (avec marge avant et après, mais pas sur les côté)
+	</h2>
+
+	<div class="divB">
+		DivisionB (pas de marges par défaut)
+	</div>
+
+	<p>
+		Paragraphe (avec marge avant et après, mais pas sur les côté), ..., ...,
+		Texte, texte, texte, texte, texte, texte, texte, texte, texte, texte, texte, texte, texte.
+		Texte, texte, texte, texte, texte, texte, texte, texte, texte, texte, texte, texte, texte.
+		Texte, texte, texte, texte, texte, texte, texte, texte, texte, texte, texte, texte, texte.
+		Texte, texte, texte, texte, texte, texte, texte, texte, texte, texte, texte, texte, texte.
+	</p>
+
+	<div class="divB">
+		DivisionB (pas de marges par défaut)
+	</div>
+
+
+</body>
+</html>

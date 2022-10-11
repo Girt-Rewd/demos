@@ -1,0 +1,248 @@
+/*L heuteur et largeur*/
+
+/* La valeur par défaut est visible: le contenu sera affiché de toute façon*/
+div.par_defaut {
+  background: yellow;
+  height: 50px;
+  width: 400px;
+}
+
+div.visible {
+  background: yellow;
+  height: 50px;
+  width: 400px;
+
+}
+
+div.hidden {
+  background: yellow;
+  height: 50px;
+  width: 400px;
+
+}
+
+div.scroll {
+  background: yellow;
+  height: 80px;
+  width: 400px;
+
+}
+
+div.auto {
+  background: yellow;
+  height: 50px;
+  width: 400px;
+
+}
+
+div.auto1 {
+  background: yellow;
+  height: 80px;
+  width: 400px;
+
+}
+
+
+/*   
+Parce qu'un élément HTML est rendu sous la forme d'un rectangle, il peut avoir jusqu'à 4 bordures: haut, bas, gauche et droite. Vous pouvez définir une bordure de tous les côtés à la fois, ou de chaque côté individuellement. */
+
+
+div.bordure {
+  border: 1px solid black;
+}
+
+/* Le padding est l'espace entre la bordure d'un élément et son contenu. */
+div.bordure_espace_interieur {
+  border: 1px solid black;
+
+}
+
+/* les marges ajoutent de l'espace à l'extérieur entre un élément et d'autres éléments */
+div.bordure_espace_exterieur {
+  border: 1px solid black;
+
+
+}
+
+/* Marge : vous pouvez mettre la valeur auto aux propriétés margin-right et margin-left pour centrer
+    horizontallement cet élément à l'intérieur de son conteneur. L'élément prendra la largeur que vous avez spécifié et
+    l'espace restant sera séparé équitablement entre les deux marges.*/
+
+#main {
+  width: 600px;
+
+  /*top left/right */
+}
+
+/* Utiliser max-width à la place de width améliorera la gestion des petites fenêtres. C'est très important lorsque l'on
+    créé un site accessible sur mobile. */
+#max-width {
+  max-width: 600px;
+  /*top left/right */
+
+}
+
+.petit {
+  width: 500px;
+  margin: 20px auto;
+  color: green;
+}
+
+.grand {
+  width: 500px;
+  margin: 20px auto;
+  color: green;
+}
+
+/*display : block */
+/* Cela transformera n'importe quel élément en un élément de bloc.
+
+Cette technique est souvent utilisée sur les liens afin d'augmenter leur zone cliquable, qui peut être facilement évaluée en définissant une couleur de fond. */
+
+.menu a {
+  background: red;
+  color: white;
+}
+
+/* Si nous transformons ces liens en blocs, nous augmentons leur zone cible:*/
+
+.menu_bloc a {
+  background: red;
+  color: white;
+
+}
+
+
+/*display : inline */
+/* Cela transforme n'importe quel élément en éléments en ligne, comme s'il s'agissait d'un simple texte.
+
+Il est souvent utilisé pour créer des navigations horizontales, où les éléments de la liste sont sémantiquement mais pas visuellement utiles. */
+
+
+.menu_inline li {
+  background: red;
+  color: white;
+
+}
+
+/* display :non */
+/* Appliquer display: non; à un élément HTML supprime de votre page Web, comme si elle n'a jamais existé dans votre code. */
+
+.supprimer {}
+
+/*La propriété visibility  est légèrement similaire à display . Appliquer visibility: hidden  cache un élément de votre page, mais ne fait que le rendre invisible: il occupe toujours l'espace qu'il était supposé avoir. */
+
+.invisible {}
+
+/*  Position */
+
+/* Relative : Lorsque la position est relative, un élément peut se déplacer en fonction de sa position actuelle */
+
+p {
+  border: 1px solid blue;
+}
+
+.deuxième_relative {}
+
+/* <div> Lorsque la position est définie sur absolu, un élément peut se déplacer en fonction du premier ancêtre positionné.</div> */
+section {
+
+  /* Cela transforme la <section> en un point de référence pour le <p> */
+
+}
+
+p.absolu {}
+
+p.fixed {}
+
+
+
+/* Float */
+
+/*  Utilisation de float modifie non seulement l'élément sur lequel il est appliqué, mais modifie également ses ancêtres, ses frères et sœurs, ses descendants et les éléments suivants.
+Le but d'appliquer float a un élément est de le pousser d'un côté et de le faire s'enrouler autour du texte.
+Float est prévu pour entourer une image avec du texte.
+
+*/
+
+/* Ce que nous voulons, c'est enrouler le texte autour de l'image: */
+
+img.float_gauche {}
+
+img.float_droit {}
+
+/* La propriété clear spécifie ce qui doit se passer avec l'élément qui est à côté d'un élément flottant.*/
+img.float {}
+
+article.clear {}
+
+
+/*   <div> une pseudo-classe commune utilisée est: hover, qui appliquera un style CSS lorsque l'élément ciblé est survolé. Testons-le sur les liens.</div>'un côté et de le faire s'enrouler autour du texte.
+
+La première ligne définit à quoi doivent ressembler tous les éléments <a> HTML (bleu). 
+La deuxième ligne définit comment <a> devrait ressembler au survol (rouge).
+
+*/
+
+a {
+  color: blue;
+}
+
+a:hover {
+  color: red;
+}
+
+/*
+   <h1>Pseudo classe : visited</h1>
+	 <div>Cette pseudo-classe cible les liens qui ont été visités. Par défaut, les liens sont bleus et deviennent violets lorsque vous les avez visités. Les résultats de Google fonctionnent comme ça</div>
+
+*/
+
+a {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+
+body {
+  background: #f2eee9;
+}
+
+
+body {
+  /*background-image: url(images/college.jpg);*/
+}
+
+/*background-position */
+/*  Par défaut, une image d'arrière-plan se répète indéfiniment. Vous pouvez spécifier sa position d'origine en choisissant une valeur x horizontale et une valeur y verticale.*/
+body {
+
+  /*background-position: right bottom;*/
+}
+
+/* Vous pouvez mélanger différentes unités de coordonnées:*/
+
+body {
+  /* background-position: center 20px;*/
+}
+
+/*Par défaut, une image d'arrière-plan se répète indéfiniment. Vous pouvez choisir de ne le répéter que horizontalement, seulement verticalement ou pas du tout.*/
+
+/* background-repeat */
+/* seulement horizontalement */
+body {
+  /* background-repeat: repeat-x; */
+}
+
+/* seulement verticalement */
+body {
+  /*background-repeat: repeat-y; */
+}
+
+/* L image apparait qu une seule fois */
+body {
+  /* background-repeat: no-repeat; */
+}

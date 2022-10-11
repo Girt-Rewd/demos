@@ -1,0 +1,40 @@
+/* Fichier utilisé pour la demo3D #02
+   Auteur    : Dini Ahamada
+   Date      : 09/09/2021
+*/
+body {
+  margin: 0px;
+  width: 100%;
+}
+
+/*** conteneur flexible ***/
+.flexible {
+  /* la base de la présentation et le padding*/
+  background-color: #f0f0f0;
+  padding: 10px;
+  /*min-height:300px;*/
+  /* propriétés flex essentielles */
+
+  /* propriétés flex supplémentaires */
+}
+
+/*** toutes les div directement dans grillage ***/
+.flexible > div {
+  /* la base de la présentation */
+  font-weight: bold;
+  text-align: center;
+  background-color: #5cb85c;
+  color: white;
+  /*padding, bordure et marges */
+  padding: 10px;
+  border: 2px black solid;
+  margin: 10px;
+  /*control des dimensions*/
+}
+
+#case-speciale {
+  /* la base de la présentation */
+  background-color: #0275d8;
+  max-height: 30px;
+  /* propriétés flex supplémentaires */
+}

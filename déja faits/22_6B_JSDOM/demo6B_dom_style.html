@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #panel, .flip {
+            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            border: solid 1px #a6d8a8;
+            margin: auto;
+        }
+
+        #panel {
+            display: none;
+        }
+    </style>
+  <script>
+    function changeColor(){
+      var newColor = document.getElementById("colorPicker").value;
+      //alert (newColor);
+      document.getElementById("colorMsg").style.background = newColor;
+
+    }
+    function myFunction() {
+      document.getElementById("panel").style.display = "block";
+    }
+  </script>
+</head>
+<body>
+<!--  innerHTML et textContent ne sont que deux des nombreuses propriétés que
+ nous pouvons utiliser pour manipuler le DOM.
+Dans cet exemple, nous utilisons getElementById () pour détecter la couleur sélectionnée par l'utilisateur.
+Nous l'utilisons ensuite à nouveau, conjointement avec style.background pour appliquer la nouvelle couleur.
+ Dans les deux cas, nous référons aux éléments HTML par leur ID (en utilisant getElementById ().) -->
+
+<div id="colorMsg" style="font-size:18px;width:150px;height:100px;padding:5px;">Choisissez une couleur de fond ...</div>
+<select id="colorPicker" onchange="changeColor()">
+  <option value="transparent">aucune</option>
+  <option value="yellow">Jaune</option>
+  <option value="salmon">Salmon</option>
+  <option value="lightblue">Bleu clair</option>
+  <option value="limegreen">Vert citron</option>
+</select>
+
+<p class="flip" onclick="myFunction()">Cliquer pour afficher le panneau</p>
+<div id="panel">
+    <p> Ce panneau contient un élément div, qui est masqué par défaut (display:none). </p>
+    <p> Il est stylé avec CSS et nous utilisons JavaScript pour le montrer (display: block). </p>
+    <p> Comment ça marche: Notez que l’attribut onclick est associé à l’élément p
+        avec class = "flip". Lorsque l'utilisateur clique sur l'élément p,
+        une fonction appelée myFunction () est exécutée,
+        ce qui modifie le style du div avec id = "panel": aucun (masqué) pour afficher: bloc (visible). </P>
+    <p> Vous en apprendrez plus sur JavaScript dans notre didacticiel JavaScript. </p>
+</div>
+
+</body>
+</html>

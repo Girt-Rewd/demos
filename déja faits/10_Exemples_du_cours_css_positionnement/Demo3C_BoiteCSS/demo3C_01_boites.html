@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- 
+	Démo 3C #01 : Familiarisation avec le modèle de la boite
+	Date : 2020/02/09
+	Auteur : Dini Ahamada
+-->
+<html lang="fr">
+<head>
+	<title>Démo 3C #01</title>
+	<meta  charset="UTF-8" />
+	<style rel="stylesheet" style="text/css">
+		/* Enlever toutes les marges et définir les couleurs */
+		*  {margin:0 padding:0}
+		body {background-color:#EEEEEE;}
+		h1 {background-color:#000055;color:#FFFFFF;padding-left:10}
+		img {background-color:#00FF00;vertical-align:middle;}
+		
+		/* Classes à applique sur les images */
+		.maMarge {margin:10px;}
+		.maBordure {border: 5px green solid;}
+		.monPadding {padding: 10px;}
+		.avecBoxSizing {box-sizing:border-box;}
+	</style>
+</head>
+<body>
+	<h1>Paramètres utilisés pour conserver les images à dimensions fixes (zone occupée variable)</h1>
+	<h3>Les dimensions des images sont fixes à 100px x 120px</h3>
+	<br/>
+	<h3>Images #:</h3>
+	<ol start="0" style="padding-left:40">
+		<li>Juste l'image</li>
+		<li>Padding de 10px</li>
+		<li>Padding de 10px, Bordure de 5px</li>
+		<li>Padding de 10px, Bordure de 5px, Marge de 10px</li>
+		<li>Padding de 10px, Bordure de 5px + box-sizing</li>
+		<li>Padding de 10px, Bordure de 5px, Marge de 10px + box-sizing</li>
+	</ol>
+	
+	<h1>Objectif: Toutes les images à dimensions fixe 100x120</h1>
+	<!--  ========== Padding ================= -->
+	<img alt="0" src="images/img0.png" width="100" height="120" />
+	<img alt="1" src="images/img1.png" width="100" height="120" class="monPadding" />
+	<!--  ========== Padding+bordure ================= -->
+	<img alt="0" src="images/img0.png" width="100" height="120" />
+	<img alt="2" src="images/img2.png" width="100" height="120" class="monPadding maBordure" />
+	<!--  ========== Padding+bordure+marge ================= -->
+	<img alt="0" src="images/img0.png" width="100" height="120" />
+	<img alt="3" src="images/img3.png" width="100" height="120" class="monPadding maBordure maMarge" />
+	<!--  ========== Padding+bordure+marge avec box sizing (donc surface inclue bordre+padding) ================= -->
+	<img alt="0" src="images/img0.png" width="100" height="120" />
+	<img alt="4" src="images/img4.png" width="100" height="120" class="monPadding maBordure avecBoxSizing" />
+	<!--  ========== Padding+bordure+marge avec box sizing (donc surface inclue bordre+padding, mais pas margin) ================= -->
+	<img alt="0" src="images/img0.png" width="100" height="120" />
+	<img alt="5" src="images/img5.png" width="100" height="120" class="monPadding maBordure maMarge avecBoxSizing" />
+	<img alt="0" src="images/img0.png" width="100" height="120" />
+	<h1>Fin de la zone d'images</h1>
+	<br/><br/>
+	
+	<h1>Paramètres utilisés pour conserver les zones occupées fixes (images à dimensions variables)</h1>
+	<h3>Les dimensions des images sont ajustées pour que la zone occupées soit de 100px x 120px</h3>
+	<br/>
+	<h3>Images #:</h3>
+	<ol start="0" style="padding-left:40">
+		<li>Juste l'image</li>
+		<li>Padding de 10px</li>
+		<li>Padding de 10px, Bordure de 5px</li>
+		<li>Padding de 10px, Bordure de 5px, Marge de 10px</li>
+		<li>Padding de 10px, Bordure de 5px + box-sizing</li>
+		<li>Padding de 10px, Bordure de 5px, Marge de 10px + box-sizing</li>
+	</ol>
+
+	<!-- =============================================================================================== -->
+	<!-- Ajustez les dimensions ici pour que la zone occupée par chaque élément soit de 100px par 120px -->
+	<!-- =============================================================================================== -->
+	<h1>Objectif : Toutes les zones occupées à dimensions fixe 100x120</h1>
+	<!--  ========== Padding ================= -->
+	<img alt="0" src="images/img0.png" width="100" height="120" />
+	<img alt="1" src="images/img1.png" width="1" height="1" class="monPadding" />
+	<!--  ========== Padding+bordure ================= -->
+	<img alt="0" src="images/img0.png" width="100" height="120" />
+	<img alt="2" src="images/img2.png" width="1" height="1" class="monPadding maBordure" />
+	<!--  ========== Padding+bordure+marge ================= -->
+	<img alt="0" src="images/img0.png" width="100" height="120" />
+	<img alt="3" src="images/img3.png" width="1" height="1" class="monPadding maBordure maMarge" />
+	<!--  ========== Padding+bordure+marge avec box sizing (donc surface inclue bordre+padding) ================= -->
+	<img alt="0" src="images/img0.png" width="100" height="120" />
+	<img alt="4" src="images/img4.png" width="1" height="1" class="monPadding maBordure avecBoxSizing" />
+	<!--  ========== Padding+bordure+marge avec box sizing (donc surface inclue bordre+padding, mais pas margin) ================= -->
+	<img alt="0" src="images/img0.png" width="100" height="120" />
+	<img alt="5" src="images/img5.png" width="1" height="1" class="monPadding maBordure maMarge avecBoxSizing" />
+	<img alt="0" src="images/img0.png" width="100" height="120" />
+	<h1>Fin de la zone d'images</h1>
+
+
+</body>
+</html>

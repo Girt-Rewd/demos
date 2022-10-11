@@ -1,0 +1,47 @@
+/* 
+   Fichier utilisé pour la demo3B #01
+   Familiarisation avec les propriété CSS pour contrôler les dimensions et couleurs de
+   balise de type block
+   Auteur    : Dini Ahamada
+   Date      : 08/09/2019
+*/
+/* ------------- propriétés générales --------------------------- */
+body {
+	background-color:lightgray;
+	/*min-width:700px;*/
+}
+p {
+	background-color:white;
+	border:2px black solid;	
+}
+/* -----------    classes pour les dimensions ------------------- */
+.dimensionsFixes {
+	/* 12 cm par 70 px */
+
+}
+.dimensionsRelatives1 {
+	/* 60% par auto */
+
+}
+.dimensionsRelatives2 {
+	/* 60vw par 12vh */
+
+}
+.dimensionsCalculees {
+	/* (60vw + 20px) par (12vh - 20vh) */
+
+}
+
+/* ---------------- classes pour les couleurs ---------------- */
+.couleursHex {
+	/* #3B4394 sur #F6A */
+
+}
+.couleursPredefinies {
+	/* lime sur navy */
+
+}
+.couleursRGB {
+	/* gris intensité 70/255 sur blanc opaque à 60% (donc transparent à 40%) */
+
+}

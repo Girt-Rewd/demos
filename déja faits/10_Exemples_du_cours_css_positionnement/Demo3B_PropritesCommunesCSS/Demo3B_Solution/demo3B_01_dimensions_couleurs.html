@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- 
+	Démo3B #01
+	Familiarisation avec les propriété CSS pour contrôler les dimensions et couleurs de
+	balise de type block
+	Par  : Dini Ahamada
+-->
+
+<html lang="fr">
+	<head>
+		<title>Démo 3B #01</title>
+		<meta  charset="UTF-8" />
+		<link rel="stylesheet" href="demo3B_01.css" />
+	</head>
+	<body>
+		<h1>Les dimensions</h1>
+		<p class="dimensionsFixes">
+			Classe "dimensionFixes" (en pixels et centimètres) : <br /> 
+			. . . . . . . . Largeur:12cm; Hauteur:70px 
+		</p>
+		<p class="dimensionsRelatives1">
+			Classe "dimensionsRelatives1" (relative au body) : <br /> 
+			. . . . . . . . Largeur:60%; Hauteur:auto 
+		</p>
+		<p class="dimensionsRelatives2">
+			Classe "dimensionsRelatives2" (relative au navigateur) : <br /> 
+			. . . . . . . . Largeur:60vw; Hauteur:12vh 
+		</p>
+		<p class="dimensionsCalculees">
+			Classe "dimensionsCalculees" (dimensions relatives et fixes) : <br /> 
+			. . . . . . . . Largeur:calc(60vw + 20px); Hauteur:calc(12vh - 20px) 
+		</p>
+
+		<h1>Les couleurs</h1>
+		<h3 class="couleursHex">
+			Classe "couleursHex" : texte #3B4394 sur fond #F6A 
+		</h3>
+		<h3 class="couleursPredefinies">
+			Classe "couleurPredefinies" : texte "lime" sur fond "navy" 
+		</h3>
+		<h3 class="couleursRGB">
+			Classe "couleurPredefinies" : <br/>
+			texte gris rgb(70,70,70) sur fond blanc opaque 60% à rgba(255,255,255,0.6) 
+		</h3>
+
+	</body>
+</html>

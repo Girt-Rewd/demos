@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chronometre</title>
+  <script>
+var compteur = 10;
+
+var timerX = undefined;
+function bip() {
+
+    compteur--;
+    if (compteur == 0){
+        finish();
+        compteur = 10;
+    } else {
+        document.getElementById("bip").innerHTML = compteur + " secondes restantes";
+    }
+}
+
+function afficher(){
+    compteur--;
+    if(compteur == 0){
+        stop();
+    } else{
+
+    document.getElementById("affichage").innerHTML = compteur + " secondes restantes";
+    }
+}
+function demarrer(){
+    timerX = setInterval("afficher()", 1000);
+}
+function start(){
+    timerX = setTimeout("bip()", 1000);
+}
+function finish(){
+    clearTimeout(timerX);
+    document.getElementById("bip").innerHTML = "Terminé"
+}
+function stop(){
+    clearInterval(timerX);
+    document.getElementById("bip").innerHTML = "Terminé"
+    compteur = 10;
+}
+
+  </script>
+</head>
+<body>
+<!--  SetTimeout et setInterval: Les délais en JavaScript
+
+On peut en JavaScript déclencher des action après un intervalle de temps donné,
+ou de la répéter après un intervalle de temps.
+
+Les méthodes setTimeout et setInterval sont des méthodes de l'objet Window.
+On peut donc écrire setTimeout ou window.setTimeout.
+Ce sont des processus indépendants qui, quand ils sont lancés par une instruction,
+ ne bloquent pas l'affichage du reste de la page ni les actions de l'utilisateur.
+setInterval déclenche une opération à intervalles réguliers
+
+ClearTimeout interrompt le décompte de setTimeout
+
+Cette méthode interrompt le délai et l'exécution du code associé à ce délai.
+Le processus à supprimer est reconnu par l'identifieur retourné par setTimeout
+
+var x = setTimeout(mafonction, 5000);
+...
+clearTimeout(x)
+
+setInterval est Similaire à setTimeout, elle déclenche répétitivement la même action à intervalles réguliers
+clearInterval stoppe l'action de setInterval
+
+Stoppe le processus déclenche par setInterval  -->
+
+<button onclick="start()">Lancer le décompte</button>
+<div id="bip" class="display"></div>
+
+<p>Lancer à toutes les secondes</p>
+<button onclick="demarrer()">Lancer le décompte</button>
+<div id="affichage" class="display"></div>
+
+</body>
+</html>

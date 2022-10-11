@@ -1,0 +1,36 @@
+body {
+	margin:0;
+	background-color:lightgray;
+}
+h1 {
+	width:calc(96% - 20px);
+	margin:0;
+	padding:0 2% 0 2%;
+	border:10px darkblue solid;
+	height:50px;
+    background-color:white;
+	color:darkblue;
+	text-align:center;
+}
+#haut {
+	background-color:cyan;
+	position:absolute;
+	width:98%;
+	padding-left:2%;
+	height:200px;
+	top:100px
+}
+#bas  {
+	background-color:lightgray;
+	position:absolute;
+	width:98%;
+	height:150px;
+	padding-left:2%;
+	padding-top:10px;
+	top:250px
+}
+#image {
+	position:absolute; 
+	top:50px;
+	left:10px;
+} 

@@ -1,0 +1,17 @@
+body {
+	margin:0;
+	background-color:lightgray;
+}
+h1 {
+    background-color:black;
+	color:white;
+	text-align:center;
+}
+.classePourH1{
+    background-color:gray;
+	color:blue;	
+}
+.imageAvecBordure {
+	border:10px blue solid;
+	height:100px;   
+}

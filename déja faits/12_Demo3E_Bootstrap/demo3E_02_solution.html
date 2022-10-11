@@ -1,0 +1,145 @@
+<!-- 
+  *  Description : Démonstration d'utilisation de diverses classes CSS de Bootstrap 
+  *                La plupart des tests viennent du site w3schools
+  *  Session     : A2021
+  *  Auteur      : Dini Ahamada
+ -->
+  
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Démo 3E#02</title>
+		<meta  charset="UTF-8" />
+		<link rel="stylesheet" style="text/css" href="bootstrap/css/bootstrap.css">
+		<script src="jquery/jquery-3.5.0.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.js"></script>
+		<style>
+			body, html {
+				background-color:#0000FF;
+			}
+			.container {
+				background-color:#000044;
+				max-width:90%;
+			}
+			/* ma propre classe selon la nommenclature bootstrap */
+			.bg-jaune {
+				background-color:yellow;
+			}
+			.border-10 {
+				border:10px black solid;
+			}
+			.ombrage {
+				box-shadow: 10px 15px gray;
+			}
+			</style>
+	</head>
+	<body>
+		<div class="jumbotron text-center">
+			<h1>Demo 3E # 2 - Jombotron</h1>
+		</div>
+		<div class="container">
+			<!------------------- Première Rangée ------------->
+			<div class="row">
+				<!------------------- Case A ------------->
+				<div class="col-sm-2 bg-primary">
+					<h2>Case A : Les alertes (de w3schools)</h2>
+					<div class="alert alert-success">
+						<strong>Succès!</strong> Succès ou action positive.
+					</div>		
+					<div class="alert alert-danger">
+						<strong>Danger!</strong> Erreur ou action négative.
+					</div>		
+				</div>
+				<!------------------- Case B ------------->
+				<div class="col-sm-4 bg bg-jaune">
+					<h2>Case B : Les boutons (de w3schools)</h2>
+					<button type="button" class="btn btn-default">Default</button>
+					<button type="button" class="btn btn-primary">Primary</button>
+					<button type="button" class="btn btn-success">Success</button>
+					<button type="button" class="btn btn-warning">Warning</button>
+				</div>
+				<!------------------- Case C1, C2, C3, C4 ------------->
+				<div class="col-sm-6 ">
+						<div class="row">
+							<div class="col-sm-12 bg-primary text-warning">
+								<h2>Case C1 : Les groupes de boutons (de w3schools)</h2>
+								<div class="btn-group">
+									<button type="button" class="btn btn-success">Bouton1</button>
+									<button type="button" class="btn btn-success">Bouton2</button>
+									<button type="button" class="btn btn-success text-uppercase">Bouton3</button>
+								</div> 
+								<h2>...</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 bg-secondary">
+								<h2>C2 : menu déroulant</h2>
+								 <div class="dropdown">
+									<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+									  Dropdown button
+									</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Link 1</a>
+										<a class="dropdown-item" href="#">Link 2</a>
+										<a class="dropdown-item" href="#">Link 3</a>
+									</div>
+								</div>
+						</div>
+							<div class="col-sm-4 bg-warning">
+								<h2>C3 : icône d'attente</h2>
+								<div class="spinner-border"></div>						
+							</div>
+							<div class="col-sm-4 bg-danger text-center">
+								<h2>C4 : bordures</h2>
+								<h3 class="border"></h3>
+								<h3 class="border border-0 border-warning">X</h3>
+								<h3 class="border border-top-0 border-success">X</h3>
+								<h3 class="border border-right-0">X</h3>
+								<h3 class="border border-bottom-0">X</h3>
+								<h3 class="border border-left-0">X</h3>
+							</div>
+						</div>
+				</div>
+			</div>
+			<!------------------- Deuxième Rangée ------------->
+			<div class="row">
+				<!------------------- Case D ------------->
+				<div class="col-sm-6 bg-success">
+					<h2>D : Tables</h2>
+					<table class="table table-success table-hover">
+						<thead class="thead-dark">
+							<tr>
+								<th>Firstname</th>
+								<th>Lastname</th>
+								<th>Email</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>John</td>
+								<td>Doe</td>
+								<td>john@example.com</td>
+							<	/tr>
+							<tr>
+								<td>Mary</td>
+								<td>Moe</td>
+								<td>mary@example.com</td>
+							</tr>
+							<tr>
+								<td>July</td>
+								<td>Dooley</td>
+								<td>july@example.com</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!------------------- Case E ------------->
+				<div class="col-md-6 bg-light text-primary">
+					<h2>E : Images</h2>
+					<img src="images/image1.jpg" class="img-responsive border-10 ombrage rounded float-left" alt="Paris" width="200" /> 
+					<img src="images/image1.jpg" class="img-responsive border-10 ombrage rounded-circle float-right" alt="Paris" width="200" /> 
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

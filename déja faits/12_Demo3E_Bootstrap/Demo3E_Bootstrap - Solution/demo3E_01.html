@@ -1,0 +1,68 @@
+<!-- 
+  *  Description : Démonstration d'utilisation des classes CSS container, row et col-X-X  de Bootstrap 
+
+ -->
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <title>Démo 3E#01</title>
+      <meta charset="UTF-8" />
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="bootstrap/css/bootstrap.css"
+      />
+      <script src="jquery/jquery-3.5.0.min.js"></script>
+      <script src="bootstrap/js/bootstrap.bundle.js"></script>
+      <style>
+         div {
+            color: white;
+            background-color: black;
+         }
+         .blocBleu {
+            background-color: blue;
+         }
+         .blocVert {
+            background-color: green;
+         }
+         .blocBleuFonce {
+            background-color: darkblue;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container-fluid">
+         <!--  Rangée #1 à 2 colonnes 8 (primary) et 4 unités (success) respectivement -->
+         <div class="row">
+            <div class="col-sm-4 blocBleu">
+               <h2>A</h2>
+            </div>
+            <div class="col-sm-8 blocVert">
+               <h2>B</h2>
+            </div>
+         </div>
+         <!--  Rangée #2 à 2 colonnes (rien) 4 et 8 unités respectivement -->
+			
+         <!--  Note:  la colonne 1 est divisée en 2 rangées (bleu et vert) -->
+         <div class="row">
+				<div class="col-md-8">
+					<div class="row ">
+						<div class="col-md-12 blocBleuFonce">
+							<h2>C</h2>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-md-12 blocVert">
+							<h2>D</h2>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-md-4">
+					<h2>E</h2>
+				</div>	
+         </div>
+      </div>
+   </body>
+</html>

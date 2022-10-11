@@ -1,0 +1,30 @@
+/* Fichier utilisé pour la demo3D #02
+   Auteur    : Dini Ahamada
+   Date      : 09/09/2021
+*/
+body {
+	margin:0px;
+	width:100%;
+}
+.grillage {
+	background-color:#F0F0F0;
+	padding:10px;
+	display:grid;
+	grid-template-columns:50% auto auto;
+	grid-template-rows:80px 100px 100px 100px;
+	grid-gap:40px 10px;
+}
+/* toutes les div directement dans grillage */
+.grillage > div {
+	padding:10px;
+	font-weight:bold;
+	text-align:center;
+	background-color:#5CB85C;
+	color:white;
+}
+.fusionner2colonnes {
+	grid-column-end: span 2;
+}
+.commencer2eColonne {
+	grid-column-start: 2;
+}

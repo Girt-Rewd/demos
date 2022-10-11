@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- 
+	Démo 3A #03
+	Priorité avec les différentes façons d'appliquer des règles css
+		- Balise (- prioritaire)
+		- classe
+		- id
+		- attribut style(+ proiritaire)
+		
+-->		
+<html lang="fr">
+	<head>
+		<title>Démo 3A #03</title>
+		<meta  charset="UTF-8" />
+		<!-- CSS dans la balise head --> 
+		<style rel="stylesheet">
+			/* règle pour les tables */
+			table, td, th {
+				border:2px black solid; 
+				border-collapse:collapse;
+				background-color: #EEEEEE;
+				padding:10px;
+			}
+			th {
+				background-color: #CCCCCC;
+			}
+
+			/* règles pour les balises h2, une classe et un id */	
+			#monId {
+				background-color:darkgreen;
+			}
+			.maClasse {
+				background-color:black;
+				color: white;
+			}
+			h2 {
+				background-color:darkblue;
+				color: yellow;
+				border:10px lightgreen solid;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<h2>Titre h2 régulier</h2>
+
+		<h2 class="maClasse">Titre h2 avec classe</h2>
+
+		<h2 id="monId">Titre h2 avec id</h2>
+
+		<h2 id="monId" class="maClasse" >Titre h2 avec classe et id</h2>
+
+		<h2 style="border:5px yellow dotted;">
+			Titre h2 avec attribut style
+		</h2>
+
+		<h2 id="monId" class="maClasse" style="border:5px yellow dotted;">
+			Titre h2 avec classe, id et attribut style
+		</h2>
+
+		<h1>Règles de priorités (en bas plus prioritaire)</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Catégorie visée</th>
+					<th>Arrière-plan</th>
+					<th>Texte</th>
+					<th>Bordure</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>les balises de type h2</td>
+					<td>bleu</td>
+					<td>jaune</td>
+					<td>verte</td>
+				</tr>
+				<tr>
+					<td>classe "maClasse"</td>
+					<td>noir</td>
+					<td>blanc</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>id "monId"</td>
+					<td>vert foncé</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>dans la balise avec style</td>
+					<td></td>
+					<td></td>
+					<td>jaune</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</body>
+</html>

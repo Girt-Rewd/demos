@@ -1,0 +1,53 @@
+/*************************************************************
+ * Fichier  : demo6B_03.css
+ * Descr.   : style avec background déroulant
+ * Nom      :
+ * Date     :
+************************************************************** */ 
+html, body {
+	margin:0px;
+	width:100%;
+	height:100%;
+	font-family:arial;
+}
+
+.menuHaut{
+	background-color:#004400;
+	width:100%;
+	height:60px;
+}
+.conteneurMenuItem{
+	width:150px;
+	float:left;
+	height:100%;
+}
+.itemMenu{
+	height:40px;
+	width:100%;
+	background-color:#222222;
+	color:#DDDDDD;
+	padding:20px 0px 0px 0px;
+	text-align:center;
+	text-transform:uppercase;
+	font-weight:bold
+}
+.itemMenu-actif {
+	background-color:#00AA00;
+	color:#FFFFFF;
+}
+.sousMenuHaut{
+	width:100%;
+	height:120px;
+}
+.cache{
+	display:none;
+}
+
+#itemSousMenu{
+	width:150px;
+	background-color:#DDDDDD;
+}
+#itemSousMenu ul {
+	margin:0px;
+}
+

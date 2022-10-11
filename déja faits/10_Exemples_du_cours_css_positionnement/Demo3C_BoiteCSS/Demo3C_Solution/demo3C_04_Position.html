@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- 
+	Démo 3C #04 : Familiarisation avec position statique, fixe, absolue et relative
+	Date : 2020/02/09
+	Auteur : Dini Ahamada
+-->
+<html lang="fr">
+<head>
+	<title>Démo 3C #04</title>
+	<meta  charset="UTF-8" />
+
+	<style>
+
+		body {
+		  background-color:#DDDDDD;
+		  width:100%;}
+
+		p {
+		  background-color: cyan; 
+		  width:20%;}
+
+		.positionRelative {
+		  position:relative;
+		  left:100px;
+		  bottom:30px;
+		  background-color: yellow; 
+		  width:20%;
+		 }
+
+		.positionAbsolue {
+		  position:absolute;
+		  left:600px;
+		  top:400px;
+		  background-color: orange; 
+		  width:20%;
+		 }
+		 
+		.positionFixe{
+		  position:fixed;
+		  top:100px;
+		  right:150px;
+		  background-color: lime; 
+		  border: 10px forestgreen solid;
+		  width:40%;
+		  height:120px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>
+	  Exemple de titre hors division, avec 
+	  position statique, absolue, fixe et relative.
+	</h1>
+
+	<div class="positionFixe">
+	   Contenu de la division à position fixe<br />
+	   Ne bouge pas quand on déroule vers le bas <br/>
+	   <b>Position par rapport au coin droit haut de l'écran</b>,top :100px, right :150px;
+	</div>
+	<p>
+	  Plusieurs paragraphes (position statique par  
+	  défaut, largeur 20%), donc dans son
+	  positionnement naturel.
+	</p>
+	<p>
+	  Plusieurs paragraphes (position statique par
+	  défaut, largeur 20%), donc dans son
+	  positionnement naturel.
+	</p>
+	<p class="positionRelative">
+	  Sauf le 3e paragraphe, en position relative, qui est décalé de la gauche de 100px et 
+	  de 30px du bas par rapport à sa position normale.
+	</p>
+	<p>
+	  Plusieurs paragraphes (position statique par
+	  défaut, largeur 20%), donc dans son
+	  positionnement naturel.
+	</p>
+	<p class="positionAbsolue">
+	  Et le 5e paragraphe, en position absloue, qui est décalé de la gauche de 600px et 
+	  de 400px du haut par rapport à la position de son parent. Bouge quand on déroule vers le bas.
+	</p>
+	<p>
+	  Plusieurs paragraphes (position statique par
+	  défaut, largeur 20%), donc dans son
+	  positionnement naturel.
+	</p>
+
+</body>
+</html>

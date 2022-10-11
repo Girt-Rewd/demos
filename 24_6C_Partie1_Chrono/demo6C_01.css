@@ -1,0 +1,13 @@
+body {
+	margin:0;
+	background-color:lightgray;
+}
+h1 {
+    background-color:black;
+	color:cyan;
+	text-align:center;
+}
+input[type=button] {
+	background-color:cyan;
+	padding:10px;
+}

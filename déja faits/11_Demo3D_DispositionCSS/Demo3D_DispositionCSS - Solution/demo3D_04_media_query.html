@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+	Démo 3D #04 
+	Démo sur l'utilisation de @media
+	Date:  2021/09/09
+	Par : Dini Ahamada
+-->
+<html lang="fr">
+   <head>
+      <title>Démo 3E#02</title>
+      <meta charset="UTF-8" />
+      <style>
+         body {
+            background-color: orange;
+         }
+         @media screen and (min-width: 768px) {
+            body {
+               background-color: yellow;
+            }
+         }
+         @media screen and (min-width: 992px) {
+            body {
+               background-color: cyan;
+            }
+         }
+         @media screen and (min-width: 1200px) {
+            body {
+               background-color: lightgreen;
+            }
+         }
+
+         @media screen and (orientation: portrait) {
+            h3 {
+               color: gray;
+            }
+         }
+         .gris {
+            background-color: #eeeeee;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>Type d'écran</h1>
+
+      <h3>Légende (noir landscape, gris portrait)</h3>
+      <div class="gris">
+         <hr />
+         <ul>
+            <li style="background-color: orange">Cellulaire &lt; 768 px</li>
+            <li style="background-color: yellow">
+               Tablette &ge; 768 px mais &lt; 992px
+            </li>
+            <li style="background-color: cyan">
+               Petit écran ordinateur &ge; 992 px mais &lt; 1200px
+            </li>
+            <li style="background-color: lightgreen">
+               Large écran ordinateur &ge; 1200px
+            </li>
+         </ul>
+         <hr />
+      </div>
+   </body>
+</html>

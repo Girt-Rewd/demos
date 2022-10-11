@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Démo 6B, #00</title>
+  <style>
+    h1 {
+      background-color: yellow;
+      color: blue;
+    }
+
+    .titre-bleu {
+      background-color: blue;
+      color: yellow;
+    }
+  </style>
+  <script>
+    // Fonction qui change la grandeur de la photo
+    // ... deux valeurs possible pour le paramètre 'grande' ou 'petite'
+    function formaterPhoto(grandeur) {
+      // Étape 1 : Obtenir les objets représentant les balises
+      //obtenir l'objet d'une balise avec id photoTransport,moyenTransport
+      var imageBateau = document.getElementById("photoTransport");
+      var texteBateau = document.getElementById("moyenTransport");
+      //obtenir toutes les balises nommées h1, renvoie une collection d'elements
+      var titre = document.getElementsByTagName("h1")[0];
+
+      // Étape 2 : modifier les attributs, contenu, classe CSS de ces objets
+      if (grandeur == "petite") {
+        //Pour Obtenir la valeur d'un attribut, par exemple height
+        imageBateau.height = 100;
+        //Pour modifier/obtenir le contenu de texte d'une balise, on utilise l’attribut innerHTML
+        //La propriete innerHTML renvoie le contenu HTML
+        texteBateau.innerHTML = "Petit bateau";
+        //enlève la classe nomClasse de la liste
+        // titre.classList.remove("titre-bleu");
+      } else {
+        imageBateau.height = 200;
+        texteBateau.innerHTML = "Grand bateau";
+        //ajoute la classe nomClasse à la liste
+        // titre.classList.add("titre-bleu");
+      }
+      //Pour obtenir, ajouter, modifier
+      //les classes associées à une balise
+      //on utilise l’attribut classList
+      //la méthode toggle ajoute un classe qui n’est pas là,
+      //ou enlève une classe qui est déjà là.
+      titre.classList.toggle("titre-bleu");
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Démo 6B #00</h1>
+
+  <h2>Un beau bateau</h2>
+  <input onclick="formaterPhoto('petite')" type="button" value="Petite photo" />
+  <input onclick="formaterPhoto('grande')" type="button" value="Grande photo" />
+  <br /><br />
+  <img id="photoTransport" alt="transport" src="images/bateau.jpg" height="150" />
+  <p id="moyenTransport">Moyen bateau</p>
+</body>
+
+</html>

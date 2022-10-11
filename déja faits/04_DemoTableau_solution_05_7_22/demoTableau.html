@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Tableau</title>
+</head>
+
+<body>
+    <h1>Le tableau simple</h1>
+    <table>
+        <tr>
+            <td>Caremen</td>
+            <td>33 ans</td>
+            <td>Espagne</td>
+        </tr>
+        <tr>
+            <td>Michel</td>
+            <td>25 ans</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Pierre</td>
+            <td>35 ans</td>
+            <td>France</td>
+        </tr>
+    </table>
+
+
+    <h1>Le tableau simple avec bordure</h1>
+    <table border="1">
+        <tr>
+            <td>Caremen</td>
+            <td>33 ans</td>
+            <td>Espagne</td>
+        </tr>
+        <tr>
+            <td>Michel</td>
+            <td>25 ans</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Pierre</td>
+            <td>35 ans</td>
+            <td>France</td>
+        </tr>
+    </table>
+
+    <h1>Le tableau simple avec bordure et entête</h1>
+    <table border="1">
+        <tr>
+            <th>Nom</th>
+            <th>Age</th>
+            <th>Pays</th>
+        </tr>
+        <tr>
+            <td>Caremen</td>
+            <td>33 ans</td>
+            <td>Espagne</td>
+        </tr>
+        <tr>
+            <td>Michel</td>
+            <td>25 ans</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Pierre</td>
+            <td>35 ans</td>
+            <td>France</td>
+        </tr>
+    </table>
+
+    <h1>Le tableau simple avec bordure et entête, avec titre du tableau</h1>
+    <table border="1">
+        <caption>Passagers du vol 377</caption>
+        <tr>
+            <th>Nom</th>
+            <th>Age</th>
+            <th>Pays</th>
+        </tr>
+        <tr>
+            <td>Caremen</td>
+            <td>33 ans</td>
+            <td>Espagne</td>
+        </tr>
+        <tr>
+            <td>Michel</td>
+            <td>25 ans</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Pierre</td>
+            <td>35 ans</td>
+            <td>France</td>
+        </tr>
+    </table>
+
+    <h1>Le tableau divise en 3 sections </h1>
+    <table border="1">
+        <caption>Passagers du vol 377</caption>
+        <thead>
+            <!-- En tête du tableau -->
+            <tr>
+                <th>Nom</th>
+                <th>Age</th>
+                <th>Pays</th>
+            </tr>
+
+        </thead>
+
+        <tfoot>
+            <!-- Le pied du tableau -->
+            <tr>
+                <th>Nom</th>
+                <th>Age</th>
+                <th>Pays</th>
+            </tr>
+
+        </tfoot>
+        <tbody>
+            <!--  Le corps du tableau-->
+
+            <tr>
+                <td>Caremen</td>
+                <td>33 ans</td>
+                <td>Espagne</td>
+            </tr>
+            <tr>
+                <td>Michel</td>
+                <td>25 ans</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>Pierre</td>
+                <td>35 ans</td>
+                <td>France</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+
+    <h1>Le tableau avec des cellules fusionnées Horisontalement </h1>
+    <table border="1">
+        <caption>Passagers du vol 377</caption>
+        <thead>
+            <!-- En tête du tableau -->
+            <tr>
+                <th>Nom</th>
+                <th>Age</th>
+                <th>Pays</th>
+            </tr>
+
+        </thead>
+
+        <tfoot>
+            <!-- Le pied du tableau -->
+            <tr>
+                <th>Nom</th>
+                <th>Age</th>
+                <th>Pays</th>
+            </tr>
+
+        </tfoot>
+        <tbody>
+            <!--  Le corps du tableau-->
+
+            <tr>
+                <td colspan="3">Caremen 33 ans Espagne</td>
+                <!--
+                    <td>33 ans</td>
+                <td>Espagne</td>
+                 -->
+
+            </tr>
+            <tr>
+                <td>Michel</td>
+                <td>25 ans</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>Pierre</td>
+                <td>35 ans</td>
+                <td>France</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Jean 67 ans</td>
+
+                <td>France</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+
+    <h1>Le tableau avec des cellules fusionnées Verticalement </h1>
+    <table border="1">
+        <caption>Passagers du vol 377</caption>
+        <thead>
+            <!-- En tête du tableau -->
+            <tr>
+                <th>Nom</th>
+                <th>Age</th>
+                <th>Pays</th>
+            </tr>
+
+        </thead>
+
+        <tfoot>
+            <!-- Le pied du tableau -->
+            <tr>
+                <th>Nom</th>
+                <th>Age</th>
+                <th>Pays</th>
+            </tr>
+
+        </tfoot>
+        <tbody>
+            <!--  Le corps du tableau-->
+
+            <tr>
+                <td rowspan="3">Caremen Michel Pierre</td>
+
+                <td>33 ans</td>
+                <td>Espagne</td>
+
+
+            </tr>
+            <tr>
+                <!--   <td>Michel</td> -->
+
+                <td>25 ans</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <!--  <td>Pierre</td> -->
+
+                <td>35 ans</td>
+                <td>France</td>
+            </tr>
+
+            <tr>
+                <td>Jean</td>
+                <td>67 ans</td>
+
+                <td>France</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>

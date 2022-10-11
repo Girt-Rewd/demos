@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Démo 6B, #02</title>
+  <script src="demo6B_02_solution.js"></script>
+  <style>
+    td,
+    table {
+      border-collapse: collapse;
+      border: 2px black solid;
+    }
+
+    div {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+
+<body onload="fct(document.body,7);">
+  <h1>Démo 6B #02</h1>
+
+  <h2>Moyen de transport</h2>
+
+  <img alt="transport" src="images/bateau.jpg" height="100" />
+  <p>Moyen de transport : Bateau</p>
+
+  <h2 id="titre2">Listes</h2>
+  <ul>
+    <li id="item1">item 1</li>
+    <li id="item2">item 2</li>
+    <li>item 3<span style="color: red">(OK)</span></li>
+    <li>item 4</li>
+  </ul>
+
+  <div>
+    <h2>Listes</h2>
+    <table>
+      <!-- Il y a un tbody sous entendu ... -->
+      <tr>
+        <td>Case: 0, 0</td>
+        <td>Case: 0, 1</td>
+        <td>Case: 0, 2</td>
+      </tr>
+      <tr>
+        <td>Case: 1, 0</td>
+        <td>Case: 2, 1</td>
+        <td>Case: 3, 2</td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>

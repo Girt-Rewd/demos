@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Maquette d'une page d'accueil</title>
+    <style>
+        .center {
+            margin: auto;
+            width: 50%;
+
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="center">
+        <h1>Les balises universelles, génériques</h1>
+        <p> Il existe deux balises qui n ont aucune valeur sémantique, <br>
+            elles sont utilisées pour la mise ne forme, pour regrouper des elements
+        </p>
+        <p>
+            Balise "div" de type block,utilisée pour regrouper des informations et la mise en forme du document, pour
+            créer différentes sections
+        </p>
+        <p>
+            Balise "span" de type inline, utilisé essentielement pour appliquer du style a du texte
+
+        </p>
+
+    </div>
+
+    <div class="master">
+
+        <div class="entete">
+            <img id="logo" src="logo.jpg" alt="logo" width="120" height="80" />
+
+            <p><span class="titre">En-tête</span> - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                nec condimentum sapien.
+                <img id="banniere" src="banniere.png" alt="banniere" width="120" height="60" />
+            </p>
+
+
+            <div class="navigation">
+                <p><span class="titre">Navigation</span></p>
+                <ul>
+                    <li> <a href="#"> accueil</a> </li>
+                    <li> <a href="#"> A propos</a> </li>
+                    <li> <a href="#"> Service</a> </li>
+                    <li> <a href="#"> Contact</a> </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="menu">
+            <p><span class="titre">Menu</span></p>
+            <label for="recherche">Rechercher :</label>
+            <input type="search" name="recherche" id="recherche" />
+            <ul>
+                <li> <a href="#"> Option1</a> </li>
+                <li> <a href="#"> Option2</a> </li>
+                <li> <a href="#"> Option3</a> </li>
+                <li> <a href="#"> Option4</a> </li>
+                <li> <a href="#"> Option5</a> </li>
+                <li> <a href="#"> Option6</a> </li>
+            </ul>
+
+            <ol type="1" start="5">
+                <li> <a href="#"> Option1</a> </li>
+                <li> <a href="#"> Option2</a> </li>
+                <li> <a href="#"> Option3</a> </li>
+                <li> <a href="#"> Option4</a> </li>
+                <li value="15"> <a href="#"> Option5</a> </li>
+                <li> <a href="#"> Option6</a> </li>
+            </ol>
+        </div>
+
+        <div class="contenu">
+
+            <p><span class="titre">Contenu</span>
+                - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec condimentum sapien. Phasellus
+                egestas justo ac elit ullamcorper a pharetra diam faucibus.</p>
+
+        </div>
+
+        <div class="pied">
+            <p><span class="titre">Pied</span> - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                nec condimentum sapien. - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+.rouge{
+   background-color: red;
+   height: 100px;
+}
+.bleu{
+   background-color: blue;
+   height: 200px;
+}
+.btn-personalise{
+   background-color: red;
+   height: 100px;
+   width: 200px;
+}

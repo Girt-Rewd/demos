@@ -1,0 +1,49 @@
+/* Fichier utilisé pour la demo3D #02
+  
+*/
+body {
+	margin:0px;
+	width:100%;
+}
+
+/******** Division contenur du grillage ******/
+	
+	/*background-color:#F0F0F0;
+	padding:10px;*/
+.grillage{
+	background-color:#beffc9;
+	padding:10px;
+	display: grid;
+	grid-template-columns: 50% auto auto/**/;
+	grid-template-rows: 80px 100px 100px 100px;
+	/*grid-gap: 40px 100px;*/
+	row-gap: 40px;
+	column-gap: 100px;
+}
+
+
+/******** Format pour toutes les div directement dans grillage ******/
+	.grillage > div{
+	padding:10px;
+	font-weight:bold;
+	text-align:center;
+	background-color:#5CB85C;
+	color:white;
+}
+	/* padding:10px;
+	font-weight:bold;
+	text-align:center;
+	background-color:#5CB85C;
+	color:white;*/
+
+	
+/******** Modifier le comportement des éléments ******/
+/* fusionner2colonnes  */
+.fusionner2colonnes{
+	grid-column-end: span 2;
+}
+
+/* commencer2eColonne */
+.commencer2colone{
+	grid-column-start: 2;
+}

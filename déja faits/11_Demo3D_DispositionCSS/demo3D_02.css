@@ -1,0 +1,26 @@
+/* Fichier utilisé pour la demo3D #02
+  
+*/
+body {
+	margin:0px;
+	width:100%;
+}
+
+/******** Division contenur du grillage ******/
+	
+	/*background-color:#F0F0F0;
+	padding:10px;*/
+
+/******** Format pour toutes les div directement dans grillage ******/
+	
+	/* padding:10px;
+	font-weight:bold;
+	text-align:center;
+	background-color:#5CB85C;
+	color:white;*/
+
+	
+/******** Modifier le comportement des éléments ******/
+/* fusionner2colonnes  */
+
+/* commencer2eColonne */

@@ -1,0 +1,44 @@
+/* Fichier utilisé pour la demo3D #02
+ 
+*/
+body {
+	margin:0px;
+	width:100%;
+}
+/*** conteneur flexible ***/
+.flexible {
+	/* la base de la présentation et le padding*/
+	background-color:#F0F0F0;
+	padding:10px;
+	/*min-height:300px;*/
+	/* propriétés flex essentielles */
+	display:flex;
+	flex-wrap:wrap;                     /* wrap, no-wrap */
+	/* propriétés flex supplémentaires */
+
+}
+
+/*** toutes les div directement dans grillage ***/
+.flexible > div {
+	/* la base de la présentation */
+	font-weight:bold;
+	text-align:center;
+	background-color:#5CB85C;
+	color:white;
+	/*padding, bordure et marges */
+	padding:10px;
+	border:2px black solid;
+	margin:10px;
+	/*control des dimensions*/
+	min-width:80px;
+	height:60px;
+	
+}
+/*** case bleue spéciale ***/
+#case-speciale {
+	/* la base de la présentation */
+	background-color:#0275D8;
+	max-height:30px;
+	/* propriétés flex supplémentaires */
+	
+}

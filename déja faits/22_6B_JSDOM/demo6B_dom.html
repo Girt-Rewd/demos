@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulationdu DOM:Démo 4B</title>
+  <script>
+    //Recupere l'element l'element h1 dont l attribut id
+    // var elementTitre = document.getElementById("titre");
+    //La propriete innerHTML renvoie le contenu HTML, on affiche la phrase du titre
+    function changeTitre() {
+      // Recupere l'element l'element h1 dont l attribut id
+      //La propriete innerHTML renvoie le contenu HTML, on affiche la phrase du titre
+        // Lorsque vous utilisez innerHTML, vous pouvez modifier le contenu de la page sans actualiser la page.
+      //  Cela peut donner l'impression que votre site Web est plus rapide et plus réactif
+      //  aux commentaires des utilisateurs. -->
+      var contenuDuTitre = document.getElementById("titre").innerHTML;
+      // alert(contenuDuTitre);
+      contenuDuTitre.innerHTML = "Test";
+    }
+    function showMsg2(){
+        // Comme dans l'exemple précédent, nous ne souhaitons probablement pas
+     //   que l'utilisateur entre du HTML.
+   // Nous voulons juste qu'ils inscrivent leur nom en clair. Lors de la sortie de texte brut sans balises HTML,
+  //    il est généralement plus approprié d'utiliser textContent plutôt que innerHTML.
+    //   Donc, si nous remplaçons innerHTML par textContent, cela ressemblerait à ceci:
+    var userInput = document.getElementById("userInput2").value;
+    //alert(userInput);
+    document.getElementById("userMsg2").textContent = userInput;
+
+    }
+    /* Récupération de la valeur d'un champ de saisie avec JavaScript*/
+    function recuperation() {
+      var saisie = document.getElementById("mon_champ");
+      alert (saisie.value);
+
+    }
+
+    // Suppression d'un attribut HTML en JavaScript (fonction removeAttribute) //
+    function afficher() {
+      var cible = document.getElementById("c");
+      cible.removeAttribute("hidden");
+
+    }
+    // Le DOM est un concept très important pour compredre comment JavaScript 
+    //et HTML interagissent
+    // https://dom.spec.whatwg.org/
+
+    // Utilisation du DOM pour ajouter un élément depuis 
+    //une balise <div> d'une page HTML (fonction appendChild)  
+      //pour inserer un noeud a un endroit precis-->
+      //<img src= "">
+    function AjouterImage() {
+      var noeud = document.createElement("img");
+      noeud.setAttribute("src", "images/Photo1.png");
+      var  cible = document.getElementById("cible");
+      cible.appendChild(noeud);
+
+    }
+
+    // Utilisation du DOM pour retirer un élément
+    // d'une page HTML (fonction remove) 
+    function supprimerImage() {
+      var noeudParent = document.getElementById("cible");
+      noeudParent.remove();
+    }
+
+    function afficherAttributs() {
+      var tabAttributs=document.getElementById("cible").attributes;
+      var message="TOUS LES ATTRIBUTS DE LA DIV l'id cible#\n================\n";
+      var objet=null;
+      //  il est possible d’obtenir son nom  et sa valeur .
+      for (var i=0;i<tabAttributs.length;i++) {
+        message=message+tabAttributs[i].name+":"+tabAttributs[i].value+"\n";
+      }
+      alert(message);
+    }
+    function CombienParagraphe(){
+        //La methode getElementsByName retourn l  elemnt du nom precis
+        var  allgender = document.getElementsByTagName("p");
+        alert("Le nombre de paragraphe sont :"+allgender.length);
+
+    }
+    function totaleElement(){
+        //La methode getElementsByName retourn l  elemnt du nom precis
+        var  allgender = document.getElementsByName("gender");
+        alert("Total de gender:"+allgender.length);
+    }
+
+  </script>
+</head>
+<body>
+
+<!--Recupere l'element l'element h1 dont l attribut id
+La propriete innerHTML renvoie le contenu HTM L-->
+
+<h1 id="titre">Bonjour tout le monde</h1>
+<button onclick="changeTitre()">Afficher le nouveau titre</button> </br> </br> </br>
+<!--Nous voulons juste qu'ils inscrivent leur nom en clair. Lors de la sortie de texte brut sans balises HTML,
+il est généralement plus approprié d'utiliser textContent plutôt que innerHTML.-->
+<input type="input" maxlength="40" id="userInput2" onkeyup="showMsg2()" placeholder="Entrez le texte ici...">
+<p id="userMsg2"></p>
+<!-- Récupération de la valeur d'un champ de saisie avec JavaScript-->
+<form>
+  <input id="mon_champ" type="text">
+  <button onclick="recuperation();"> Cliquer ici</button>
+</form>
+
+<!-- Suppression d'un attribut HTML en JavaScript (fonction removeAttribute)-->
+<p>Etes-vous majeur ?</p>
+<button id="a" onclick="afficher()"> Oui</button>
+<button id="b"> Non</button>
+<button hidden="true" id="c"> Continuer</button> </br> </br>
+<!-- Utilisation du DOM pour ajouter un élément depuis une balise <div> d'une page HTML (fonction appendChild)  pour inserer un noeud a un endroit precis-->
+<p>
+  Premier paragraphe
+</p>
+
+<div id="cible">
+
+</div>
+
+<p>
+  Second paragraphe
+</p>
+
+<button onclick="AjouterImage()"> Ajouter une image à une place précise</button> </br> </br>
+<!-- Utilisation du DOM pour retirer un élément d'une page HTML (fonction remove -->
+<button onclick="supprimerImage()"> SupprimerImage</button> </br> </br>
+
+<button onclick="afficherAttributs()"> Les attributs</button> </br> </br>
+
+<button  onclick ="CombienParagraphe()">Compte paragaphes</button> </br> </br>
+<form>
+    Male :    <input   type ="radio" name="gender" value="male">
+    Famele :  <input type ="radio" name="gender" value="famele">
+    <input type="button"  onclick ="totaleElement()" value ="Total gendre">
+</form>
+</body>
+</html>

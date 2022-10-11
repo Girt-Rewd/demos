@@ -1,0 +1,19 @@
+/* Style pour les tables avec bordures */
+body {
+	background-color:#DDDDFF;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+h1{
+	background-color:#222266;
+	color:white;
+	text-align:center;
+	padding:20px;
+}
+
+h3 {
+	background-color:#DDDDDD;
+	border:black 1px solid;
+	padding:5px;
+	width:60%;
+}

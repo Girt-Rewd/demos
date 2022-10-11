@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- 
+	Démo 3C #03 : Familiarisation avec éfondrements de marges verticales
+	Date : 2020/02/09
+	Auteur : Pierre Coutu
+-->
+
+<html lang="fr">
+<head>
+	<title>Démo 3C #03</title>
+	<meta  charset="UTF-8" />
+
+	<style rel="stylesheet" style="text/css">
+		/************ elenver les marges par défaut pour le body et h1 ***************/
+		body  {
+			background-color:lightgray;
+			margin:0;
+		}     
+		h1 {
+			background-color:black;
+			color:white;
+			margin:0;
+		}     
+		/************ par défaut div n'ont pas de marges *************/
+		div {
+			width:1000px;
+			height:70px;
+		}
+		.divA {
+			background-color:yellow;
+			margin:0px;
+		} 
+
+		.divB  {
+			background-color:#8888FF;
+			margin:20px 0px 20px 15px;
+		} 
+		.divC { 
+			background-color:#88FF88;
+			margin:10px 0px 50px 15px;
+		}
+
+		.divD {
+			background-color:#FF88FF;
+			margin:20px 5px 20px 50px;
+			width:1200px;
+			height:auto;
+		} 
+		.divE {
+			background-color:#88FF88;
+			margin:10px 5px 70px 50px;
+			width:1100px;
+			height:auto;
+		}
+	</style>
+
+</head>
+<body>
+	<h1>Cas éléments frères</h1>
+
+	<div class="divA">DivisionA : Sans marges</div>
+	<div class="divA">DivisionA : Sans marges</div>
+
+	<div class="divB">
+		DivisionB : Marges (haut:20,bas:20)... <br/>
+		<b>Marge en haut 20 px.</b> Car marge du bas de A : 0px, marge du haut B : 20px --> max(A-bas,B-haut) --> max(0,20) --> 20px<br/>
+		<b>Marge en bas 20 px.</b> Car marge du bas de B : 20px, marge du haut C : 10px --> max(B-bas,C-haut) --> max(20,10) --> 20px
+	</div>
+
+	<div class="divC"> 
+		DivisionC : Marges (haut:10,bas:50)... <br/>
+		<b>Marge en haut 20 px.</b> Car marge du bas de B : 20px, marge du haut C : 10px --> max(B-bas,C-haut) --> max(20,10) --> 20px <br/>
+		<b>Marge en bas 50 px.</b>Car marge du bas de C : 50px, marge du haut B : 20px --> max(C-bas,B-haut) --> max(50,20) --> 50px
+	</div>
+	
+	<div class="divB">
+		DivisionB : Marges (haut:20,bas:20)... <br/>
+		<b>Marge en haut 50 px.</b> Car marge du bas de C : 50px, marge du haut B : 20px --> max(C-bas,B-haut) --> max(50,20) --> 50px<br/>
+		<b>Marge en bas 20 px.</b> Car marge du bas de B : 20px, marge du haut A : 0px --> max(B-bas,A-haut) --> max(20,0) --> 20px
+	</div>
+	<div class="divA">
+		DivisionA : Marges (haut:0,bas:0)... <br/>
+		<b>Marge en haut 20 px.</b> Car marge du bas de B : 20px, marge du haut A : 0px --> max(B-bas,A-haut) --> max(20,0) --> 20px<br/>
+		<b>Marge en bas 0 px.</b> Car marge du bas de A : 0px, marge du haut h1 : 0px --> max(A-bas,h1-haut) --> max(0,0) --> 0px
+	</div>
+
+	<h1>Cas éléments parents-enfants</h1>
+	<div class="divD">
+		<div class="divE"> 
+			....DivisionD-Parent (Rose) : Marges (haut:20,bas:30)... <br />
+			....DivisionE-Enfant (Vert) : Marges (haut:10,bas:70)... <br />
+			<b>En haut 20 px:</b> <br />
+			Avant le Parent : max(Parent-haut,Enfant-haut) --> max(D-haut,E-Haut) -> max(20,10) --> 20 (zone grise en haut)<br />
+			Entre le Parent et l'enfant : effondré à 0 (pas de zone rose en haut du vert)<br />
+			<b>En bas 70px:</b> <br />
+			Entre le Parent et l'enfant : effondré à 0 (pas de zone rose en bas du vert)<br />
+			Après le Parent : max(Parent-bas,Enfant-bas) --> max(30,70) --> 70 (zone grise en bas)
+		</div>
+	</div>
+	<h1>Fin</h1>
+
+
+
+</body>
+</html>

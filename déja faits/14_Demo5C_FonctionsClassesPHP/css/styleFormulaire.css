@@ -1,0 +1,16 @@
+/* Style pour les tables avec bordures */
+body {
+	background-color:#DDFFDD;
+}
+label{
+	display:block;
+}
+input {
+	display:block;
+	margin-bottom:20px;
+	height:30px;
+}
+.bouton {
+	background-color:#44CC44;
+	color:yellow;
+}

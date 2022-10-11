@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<title>Formulaire</title>
+
+
+</head>
+
+<body>
+<p>Texte avant le formulaire</p>
+
+<h1>La balise principale du formulaire, elle permet d'en indiquer le début et la fin.</h1>
+<form>
+
+   <p>Texte à l'intérieur du formulaire</p>
+
+</form>
+
+
+<p>Texte après le formulaire</p>
+
+<h1>avec l'attribut methode et action</h1>
+<p>
+Eh bien c'est là le problème, ou plutôt les problèmes, que l'on va se poser :
+Problème n°1 : comment envoyer le texte saisi par le visiteur ? Par quel moyen ?
+Problème n°2 : une fois que les données ont été envoyées, comment les traiter ? Souhaitez-vous recevoir le message automatiquement par mail ou préférez-vous qu'un programme se charge de l'enregistrer quelque part, puis de l'afficher sur une page visible par tout le monde ?
+Pour fournir les réponses à ces deux problèmes, vous devez ajouter deux attributs à la balise <form> :
+method : cet attribut indique par quel moyen les données vont être envoyées (réponse au problème n°1). Il existe deux solutions pour envoyer des données sur le Web :
+method="get" : c'est une méthode en général assez peu adaptée car elle est limitée à 255 caractères. La particularité vient du fait que les informations seront envoyées dans l'adresse de la page (http://…), mais ce détail ne nous intéresse pas vraiment pour le moment. La plupart du temps, je vous recommande d'utiliser l'autre méthode : post.
+method="post" : c'est la méthode la plus utilisée pour les formulaires car elle permet d'envoyer un grand nombre d'informations. Les données saisies dans le formulaire ne transitent pas par la barre d'adresse.
+action : c'est l'adresse de la page ou du programme qui va traiter les informations (réponse au problème n°2). Cette page se chargera de vous envoyer un e-mail avec le message si c'est ce que vous voulez, ou bien d'enregistrer le message avec tous les autres dans une base de données.
+Cela ne peut pas se faire en HTML et CSS, on utilisera en général un autre langage dont vous avez peut-être entendu parler : PHP.
+</p>
+
+<form method="post" action="traitement.php">
+
+   <p><input type="text" name="pseudo" /></p>
+
+</form>
+
+<p>Zone de texte monoligne</p>
+<form method="post" action="traitement.php">
+    <p>
+        <label>Votre pseudo</label> : <input type="text" name="pseudo" />
+    </p>
+</form>
+
+<p> Il faut lier le label à la zone de texte.
+Pour ce faire, on doit donner un nom à la zone de texte, non pas avec l'attribut name mais avec l'attribut id </p>
+<p>Pour lier le label au champ, il faut lui donner un attribut for qui a la même valeur que l'id du champ</p>
+<form method="post" action="traitement.php">
+
+   <p>
+
+       <label for="pseudo">Votre pseudo</label> : <input type="text" name="pseudo" id="pseudo" />
+
+   </p>
+  </form>
+   <h2>Quelques attributs supplémentaires</h2>
+<p>
+On peut ajouter un certain nombre d'autres attributs à la balise (input) pour personnaliser son fonctionnement : On peut agrandir le champ avec size.<br/>
+On peut limiter le nombre de caractères que l'on peut saisir avec maxlength. On peut pré-remplir le champ avec une valeur par défaut à l'aide de value. .<br/>
+On peut donner une indication sur le contenu du champ avec placeholder. Cette indication disparaîtra dès que le visiteur aura cliqué à l'intérieur du champ.
+</p>
+<form method="post" action="traitement.php">
+
+    <p>
+
+        <label for="pseudo">Votre pseudo :</label>
+
+        <input type="text" name="pseudo" id="pseudo" placeholder="Ex : Zozor" size="30" maxlength="10" />
+
+    </p>
+
+</form>
+<h2>Zone de mot de passe</h2>
+<form method="post" action="traitement.php">
+
+   <p>
+
+       <label for="pseudo">Votre pseudo :</label>
+
+       <input type="text" name="pseudo" id="pseudo" />
+
+       
+
+       <br />
+
+       <label for="pass">Votre mot de passe :</label>
+
+       <input type="password" name="pass" id="pass" />
+
+       
+
+   </p>
+
+</form>
+<h2>Zone de texte multiligne</h2>
+<form method="post" action="traitement.php">
+
+   <p>
+
+       <label for="ameliorer">Comment pensez-vous que je pourrais améliorer mon site ?</label><br />
+
+       <textarea name="ameliorer" id="ameliorer"></textarea>
+
+   </p>
+
+</form>
+<h2>Zone de texte multiligne</h2>
+<p>Avec des attributs : on peut ajouter les attributs rows et cols à la balise (textarea). <br/> Le premier indique le nombre de lignes de texte qui peuvent être affichées simultanément, et le second le nombre de colonnes.</p>
+<form method="post" action="traitement.php">
+
+   <p>
+
+       <label for="ameliorer">
+
+       Comment pensez-vous que je puisse améliorer mon site ?
+
+       </label>
+
+       <br />
+
+       
+
+       <textarea name="ameliorer" id="ameliorer" rows="10" cols="50">
+
+       Améliorer ton site ?!
+
+       Mais enfin ! Il est tellement génialissime qu'il n'est pas nécessaire de l'améliorer !
+
+       </textarea>       
+
+   </p>
+
+</form>
+<h2>Les zones de saisie enrichies</h2>
+<p>HTML5 apporte de nombreuses fonctionnalités nouvelles relatives aux formulaires. De nouveaux types de champs sont en effet apparus avec cette version. Il suffit de donner à l'attribut type de la balise (input) l'une des nouvelles valeurs disponibles. Faisons un petit tour d'horizon !</p>
+
+<form method="post" action="traitement.php">
+ <label for="nom">Quel est votre nom ?</label>
+
+       <input type="text" name="nom" id="nom" /> </br>
+
+
+       <label for="prenom">Quel est votre prénom ?</label>
+
+       <input type="text" name="prenom" id="prenom" /> </br>
+
+ 
+
+       <label for="email">Quel est votre e-mail ?</label>
+
+       <input type="email" name="email" id="email" /> </br>
+  <label for="url">Quel est l'url ?</label>
+<input type="url" name="url" id="url"/> </br>
+  <label for="tel">Quel est votre téléphone ?</label>
+<input type="tel" name="tel" id="tel"/> </br>
+  <label for="number">Quel est nombre ou lettre ?</label>
+<input type="number" name="number" id="number" /> </br>
+  <label for="range">Quel est le range ?</label>
+<input type="range" name="range" id="range"/> </br>
+  <label for="color">Quelle est la coleur ?</label>
+<input type="color" name="color" id="color" /> </br>
+  <label for="date">Quel est date ?</label>
+<input type="date" name="date" id="date" /> </br>
+  <label for="search">Rechercher ?</label>
+<input type="search" name="search" id="search" />
+
+</form>
+<h2>Les éléments d'options</h2>
+<p>
+HTML vous offre une ribambelle d'éléments d'options à utiliser dans votre formulaire. Ce sont des éléments qui demandent au visiteur de faire un choix parmi une liste de possibilités. Nous allons passer en revue <br/>:
+les cases à cocher ; les zones d'options ; les listes déroulantes.</p>
+<h2>Les cases à cocher</h2>
+
+<form method="post" action="traitement.php">
+
+   <p>
+
+       Cochez les aliments que vous aimez manger :<br />
+
+       <input type="checkbox" name="frites" id="frites" /> <label for="frites">Frites</label><br />
+
+       <input type="checkbox" name="steak" id="steak" /> <label for="steak">Steak haché</label><br />
+
+       <input type="checkbox" name="epinards" id="epinards" /> <label for="epinards">Epinards</label><br />
+
+       <input type="checkbox" name="huitres" id="huitres" /> <label for="huitres">Huitres</label>
+
+   </p>
+
+</form>
+<h2>Les éléments d'options</h2>
+<p>
+HTML vous offre une ribambelle d'éléments d'options à utiliser dans votre formulaire. Ce sont des éléments qui demandent au visiteur de faire un choix parmi une liste de possibilités. Nous allons passer en revue <br/>:
+les cases à cocher ; les zones d'options ; les listes déroulantes.</p>
+<h2>Les zones d'options</h2>
+<form method="post" action="traitement.php">
+
+   <p>
+
+       Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br />
+
+       <input type="radio" name="age" value="moins15" id="moins15" /> <label for="moins15">Moins de 15 ans</label><br />
+
+       <input type="radio" name="age" value="medium15-25" id="medium15-25" /> <label for="medium15-25">15-25 ans</label><br />
+
+       <input type="radio" name="age" value="medium25-40" id="medium25-40" /> <label for="medium25-40">25-40 ans</label><br />
+
+       <input type="radio" name="age" value="plus40" id="plus40" /> <label for="plus40">Encore plus vieux que ça ?!</label>
+
+   </p>
+
+   <p>
+
+       Sur quel continent habitez-vous ?<br />
+
+       <input type="radio" name="continent" value="europe" id="europe" /> <label for="europe">Europe</label><br />
+
+       <input type="radio" name="continent" value="afrique" id="afrique" /> <label for="afrique">Afrique</label><br />
+
+       <input type="radio" name="continent" value="asie" id="asie" /> <label for="asie">Asie</label><br />
+
+       <input type="radio" name="continent" value="amerique" id="amerique" /> <label for="amerique">Amérique</label><br />
+
+       <input type="radio" name="continent" value="australie" id="australie" /> <label for="australie">Australie</label>
+
+   </p>
+
+</form>
+<h2>Les listes déroulantes</h2>
+<p>
+Les listes déroulantes sont un autre moyen élégant de faire un choix parmi plusieurs possibilités. Le fonctionnement est un peu différent. On va utiliser la balise (select) <br/> qui indique le début et la fin de la liste déroulante. On ajoute l'attribut name à la balise pour donner un nom à la liste.
+
+Puis, à l'intérieur du (select)  nous allons placer plusieurs balises (option)  (une par choix possible). On ajoute à chacune d'elles un attribut value pour pouvoir identifier ce que le visiteur a choisi.
+
+</p>
+<form method="post" action="traitement.php">
+
+   <p>
+
+       <label for="pays">Dans quel pays habitez-vous ?</label><br />
+
+       <select name="pays" id="pays">
+
+           <option value="france">France</option>
+
+           <option value="espagne">Espagne</option>
+
+           <option value="italie">Italie</option>
+
+           <option value="royaume-uni">Royaume-Uni</option>
+
+           <option value="canada">Canada</option>
+
+           <option value="etats-unis">États-Unis</option>
+
+           <option value="chine">Chine</option>
+
+           <option value="japon">Japon</option>
+
+       </select>
+
+   </p>
+
+</form>
+<h2>Les listes déroulantes</h2>
+<p>Vous pouvez aussi grouper vos options avec la balise (optgroup) <br/> Dans notre exemple, pourquoi ne pas séparer les pays en fonction de leur continent ?</p>
+<form method="post" action="traitement.php">
+
+   <p>
+
+       <label for="pays">Dans quel pays habitez-vous ?</label><br />
+
+       <select name="pays" id="pays">
+
+           <optgroup label="Europe">
+
+               <option value="france">France</option>
+
+               <option value="espagne">Espagne</option>
+
+               <option value="italie">Italie</option>
+
+               <option value="royaume-uni">Royaume-Uni</option>
+
+           </optgroup>
+
+           <optgroup label="Amérique">
+
+               <option value="canada">Canada</option>
+
+               <option value="etats-unis">Etats-Unis</option>
+
+           </optgroup>
+
+           <optgroup label="Asie">
+
+               <option value="chine">Chine</option>
+
+               <option value="japon">Japon</option>
+
+           </optgroup>
+
+       </select>
+
+   </p>
+
+</form>
+<h2>Regrouper les champs</h2>
+
+<p> Si votre formulaire grossit et comporte beaucoup de champs, il peut être utile de les regrouper au sein de plusieurs balises
+(fieldset). <br/> Chaque (fieldset) peut contenir une légende avec la balise (legend). Regardez cet exemple :</p>
+
+<form method="post" action="traitement.php">
+
+ 
+
+   <fieldset>
+
+       <legend>Vos coordonnées</legend> <!-- Titre du fieldset --> 
+
+
+       <label for="nom">Quel est votre nom ?</label>
+
+       <input type="text" name="nom" id="nom" />
+
+
+       <label for="prenom">Quel est votre prénom ?</label>
+
+       <input type="text" name="prenom" id="prenom" />
+
+ 
+
+       <label for="email">Quel est votre e-mail ?</label>
+
+       <input type="email" name="email" id="email" />
+
+
+   </fieldset>
+
+ 
+
+   <fieldset>
+
+       <legend>Votre souhait</legend> <!-- Titre du fieldset -->
+
+ 
+
+       <p>
+
+           Faites un souhait que vous voudriez voir exaucé :
+
+
+           <input type="radio" name="souhait" value="riche" id="riche" /> <label for="riche">Etre riche</label>
+
+           <input type="radio" name="souhait" value="celebre" id="celebre" /> <label for="celebre">Etre célèbre</label>
+
+           <input type="radio" name="souhait" value="intelligent" id="intelligent" /> <label for="intelligent">Etre <strong>encore</strong> plus intelligent</label>
+
+           <input type="radio" name="souhait" value="autre" id="autre" /> <label for="autre">Autre...</label>
+
+       </p>
+
+ 
+
+       <p>
+
+           <label for="precisions">Si "Autre", veuillez préciser :</label>
+
+           <textarea name="precisions" id="precisions" cols="40" rows="4"></textarea>
+
+       </p>
+
+   </fieldset>
+
+</form>
+<h2>Sélectionner automatiquement un champ</h2>
+
+
+<p>Vous pouvez placer automatiquement le curseur dans l'un des champs de votre formulaire avec l'attribut autofocus. Dès que le visiteur chargera la page, le curseur se placera dans ce champ.<br/>
+
+Par exemple, pour que le curseur soit par défaut dans le champ prenom </p>
+
+<h2> Rendre un champ obligatoire </h2>
+
+<p> Vous pouvez faire en sorte qu'un champ soit obligatoire en lui donnant l'attribut required, par exemple le champs email.</p>
+
+<h2>Le bouton d'envoi</h2>
+
+<p>Il ne nous reste plus qu'à créer le bouton d'envoi. Là encore, la balise (input) vient à notre secours. Elle existe en quatre versions :<br/>
+
+type="submit" : le principal bouton d'envoi de formulaire. C'est celui que vous utiliserez le plus souvent. Le visiteur sera conduit à la page indiquée dans l'attribut action du formulaire.<br/>
+type="reset" : remise à zéro du formulaire. <br/>
+type="image" : équivalent du bouton submit, présenté cette fois sous forme d'image. Rajoutez l'attribut src pour indiquer l'URL de l'image. <br/>
+type="button" : bouton générique, qui n'aura (par défaut) aucun effet. En général, ce bouton est géré en JavaScript pour exécuter des actions sur la page. Nous ne l'utiliserons pas ici.</p>
+
+
+
+<form method="post" action="traitement.php">
+
+ 
+
+   <fieldset>
+
+       <legend>Vos coordonnées</legend> <!-- Titre du fieldset --> 
+
+
+       <label for="nom">Quel est votre nom ?</label>
+
+       <input type="text" name="nom" id="nom" />
+
+
+       <label for="prenom">Quel est votre prénom ?</label>
+
+       <input type="text" name="prenom" id="prenom"  autofocus/>
+
+ 
+
+       <label for="email">Quel est votre e-mail ?</label>
+
+       <input type="email" name="email" id="email" required/>
+
+
+   </fieldset>
+
+ 
+
+   <fieldset>
+
+       <legend>Votre souhait</legend> <!-- Titre du fieldset -->
+
+ 
+
+       <p>
+
+           Faites un souhait que vous voudriez voir exaucé :
+
+
+           <input type="radio" name="souhait" value="riche" id="riche" /> <label for="riche">Etre riche</label>
+
+           <input type="radio" name="souhait" value="celebre" id="celebre" /> <label for="celebre">Etre célèbre</label>
+
+           <input type="radio" name="souhait" value="intelligent" id="intelligent" /> <label for="intelligent">Etre <strong>encore</strong> plus intelligent</label>
+
+           <input type="radio" name="souhait" value="autre" id="autre" /> <label for="autre">Autre...</label>
+
+       </p>
+
+ 
+
+       <p>
+
+           <label for="precisions">Si "Autre", veuillez préciser :</label>
+
+           <textarea name="precisions" id="precisions" cols="40" rows="4"></textarea>
+
+       </p>
+
+   </fieldset>
+
+<input type="submit" value="Envoyer" />
+
+<input type="button" value="Simple Button" />
+
+<input type="reset" value="Annuler" />
+
+
+</form>
+</body>
+</html>

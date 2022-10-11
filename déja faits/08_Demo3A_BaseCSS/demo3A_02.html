@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- 
+	Démo 3A #02
+	Familiarisation avec les différentes façons d'appliquer des règles css
+		- Dans un fichier externe ou dans la section head avec l'attribut style
+		  (par le type de balise, par un id, par une classe)
+		- Directement dans la balise concernée avec l'attribut style
+
+-->	
+<html lang="fr">
+	<head>
+		<title>Démo 3A #02</title>
+		<meta  charset="UTF-8" />
+
+		<!-- Importer CSS du fichier demo3A_02.css --> 
+
+		<!-- Règles CSS dans la balise head --> 
+		<style rel="stylesheet" type="text/css">
+			/*  arrière-plan bleu  et texte jaune pour les h3 */
+
+			/*  arrière-plan noir et texte lime pour le id=monId */
+
+			/*  arrière-plan jaune, texte noir et bordure rouge pour la classe=maClasse */
+
+		</style>
+
+	</head>
+	<body>
+
+		<!-- ========= 3 endroits pour placer les règles CSS ================ -->
+		<h1>- Endroits de localisation des instructions css </h1>
+	
+		<h2> À partir d'un fichier .css externe pour les h2</h2>
+
+		<h3> Dans la balise style dans l'entête pour les h3</h3>
+		
+
+		<h4>
+			Directement dans cette balise h4 avec l'attribut style (bleu foncé du orange)
+		</h4>
+
+		<!-- ========= Utilisation des id et classes ================ -->
+		<h1>- Utilisations des attributs id et class </h1>
+
+		<p> 
+			Aucun style n'est affécté à ce paragraphe 
+			........... texte texte texte texte texte texte texte texte texte texte texte texte 
+			texte texte texte texte texte texte texte texte texte texte texte texte 
+			texte texte texte texte texte texte texte texte texte texte texte texte 
+		</p>
+
+		<p>
+			Le style de ce paragraphe est défini par son attribut id "monId"
+			........... texte texte texte texte texte texte texte texte texte texte texte texte 
+			texte texte texte texte texte texte texte texte texte texte texte texte 
+			texte texte texte texte texte texte texte texte texte texte texte texte 
+		</p>
+
+		<p> 
+			Le style de ce paragraphe est défini par la classe "maCLasse" 
+			........... texte texte texte texte texte texte texte texte texte texte texte texte 
+			texte texte texte texte texte texte texte texte texte texte texte texte 
+			texte texte texte texte texte texte texte texte texte texte texte texte 
+		</p>
+
+		<h5> 
+			Ce titre h5 aussi, est défini par la classe "maCLasse"  
+		</h5>
+
+	</body>
+</html>

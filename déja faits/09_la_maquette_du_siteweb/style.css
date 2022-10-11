@@ -1,0 +1,91 @@
+/* Gabarit avec quatre blocs*/
+/* Largeur fixe pour le menu et le contenu  */  
+/* font-family:"century gothic" color: #fff;*/
+/* --------------------------------------------------------*/
+
+body{
+
+  font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+} 
+
+#master { /* Conteneur principal pour centrer le contenu */
+width:800px;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+}
+
+.titre {
+font-size:25px;
+}
+
+#entete { /* Bloc de l'en-tête */
+margin:0;
+height:90px;
+border: 1px solid red;
+background: #ff3333;
+}
+#entete p {
+margin:0 0 0 1em; /* Marge gauche de 1em */
+}
+
+#menu { /* Bloc du menu */
+background: #ffffff;
+float:left;
+margin:0;
+width:200px;
+height:570px;
+border: 1px solid green;
+}
+
+#menu p {
+margin:0 0 0 1em; /* Marge gauche de 1em */
+}
+
+#menu a {
+font-family:verdana;
+font-size:16px;
+text-decoration:none;
+}
+#menu a:hover {
+font-family:verdana;
+font-size:16px;
+color:blue;
+text-decoration:underline;
+} 
+
+#menu li {
+line-height:3em; /* Pour définir l'espace entre les options */
+ /* Aucune puce  list-style-type:none;*/
+} 
+
+
+#contenu { /* Bloc du contenu */
+background: #ffffff;
+margin:0;
+margin-left:200px;
+height:570px;
+border: 1px solid blue;
+}
+
+#contenu p {
+margin:0 0 0 1em;  /* Marge gauche de 1em */
+}
+
+#pied { /* Bloc du pied de page */
+background: #ff3333;;
+clear:both;
+margin:0;
+height:50px;
+border: 1px solid purple;
+  
+}
+
+#pied p {
+margin:0 0 0 1em; /* Marge gauche de 1em */
+}
+
+#logo{
+margin:3px;
+float:left;
+}

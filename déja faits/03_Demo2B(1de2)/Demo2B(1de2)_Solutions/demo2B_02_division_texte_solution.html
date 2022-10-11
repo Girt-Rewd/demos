@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- 
+  Démo2B - #02 : Balises pour les division de textes
+-->
+
+<html lang="fr">
+<!-- ======================== Section : HEAD =================== -->
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Démo 2B, #02</title>
+	<!-- Style css pour les division (en bleu foncé) et les paragraphe (en bleu pâle) -->
+	<style>
+		div {
+			background-color: #8888CC;
+		}
+
+		p {
+			background-color: #DDDDFF;
+		}
+	</style>
+</head>
+<!-- ======================== Section : BODY ==================== -->
+
+<body>
+
+	<!-- Section sur les titres h1 à h6 -->
+	<h1>Les titres (niveau1) </h1>
+	<h2>Les titres (niveau2)</h2>
+	<h6>Les titres (niveau6)</h6>
+
+	<!-- Section sur les div, p, br et hr-->
+	<h1>Les divisions, les paragraphes, les retours de lignes et les lignes horizontales.</h1>
+
+	<p>Ici il y a un paragraphe qui contient du texte, et du texte, et du texte, et du texte, et du texte,
+		et du texte, et du texte, et du texte, et du texte, et du texte, et du texte, et du texte, et qui se termine
+		ici.</p>
+
+	Le texte ici est hors paragraphe mais suivit
+	d'un retour de ligne ici, <br>
+
+	et continue ici toujours hors paragraphe.<br>
+
+	<div>
+		La division commence ici
+
+		<p>Avec un premier paragraphe à l'intérieur, avec du texte, et du texte, et du texte, et du texte,
+			et du texte, et du texte, et du texte, et du texte, et du texte, et du texte, et du texte, et qui se termine
+			ici.</p>
+		<p>
+			Suivi d'un 2e paragraphe ici, avec du texte, et du texte, et du texte, et du texte,
+			et du texte, et du texte, et du texte, et du texte, et du texte, et du texte, et du texte, et qui se termine
+			ici
+		</p>
+
+		après cette ligne horizontale,
+
+		<hr />
+
+		la division se termine ici avec ce texte hors paragraphe ..
+	</div>.
+
+	<!-- Section sur les string, b, i, strong et span -->
+	<h1>Formatage de texte</h1>
+
+	<p>À l'intérieur de ce paragraphe, on peut placer ce ... <strong>en format strong </strong> ..., ou ce ... <b>texte
+			en format bold</b>
+		...,
+		ou ... <i>en format italic</i>..., ou ... <b> <i>les deux (bold+italic)</i></b>... .
+		De plus, la balise &lt;span&gt; est l'équivalent
+		de la balise &lt; div &gt;, mais pour du texte à l'intérieur d'un pragraphe.
+		Ainsi pour placer ce ... <span style="color:red;font-size:25px">texte en "color:red;font-size:25px;"</span>, ...
+		on utilise &lt;span&gt; et l'attribut style et la valeur spécifiée entre les guillemets.</p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+/* Fichier utilisé pour la demo3D #01
+ 
+*/
+body {
+	margin:0px;
+	width:100%;
+}
+.verte {
+	background-color:#D0FFD0;
+	height:100px;
+	width:calc(100% - 20px);
+	padding:10px;
+}
+.mauve {
+	background-color:#D0C0E0;
+	height:300px;
+	width:calc(100% - 20px);
+	padding:10px;
+}
+.bleue1 {
+	background-color:#E0E0FF;
+	height:100px;
+	width:20%;
+	float:left;
+}
+.bleue2 {
+	background-color:#D0D0FF;
+	height:100px;
+	width:50%;
+	float:left;
+}
+.bleue3 {
+	background-color:#C0C0FF;
+	height:100px;
+	width:30%;
+	float:left;
+}

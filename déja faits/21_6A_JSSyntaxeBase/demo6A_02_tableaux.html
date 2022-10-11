@@ -1,0 +1,65 @@
+<!--
+ *  Démonstration : Chapitre 6A #02
+ *  Description   : Pratiquer les fonctions et les tableaux en Javascript
+ *  Session       : A2022
+ *  Auteur        : 
+-->
+<!DOCTYPE html>
+<html lang="fr" >
+<head>
+	<meta charset="UTF-8" />
+	<title>Démo 6A, #02</title>
+
+	<style rel="stylesheet" type="text/css">
+		p {background-color:lightgreen;width:10%;}
+		
+	</style>
+	<!--- Ce script sera exécuté une fois lorsque le chargement de la page sera rendu ici -->
+	<script>
+
+		// afficher les informations d'un étudiant par son nom
+	
+			// Déclarer les 3 tableaux (tabNotes, tabNumeros, tabNoms) et les autres variables
+			function maFonction(){
+				var tabNotes = [50.5, 60.4, 70.3, 80.2];
+				var tabNumeros = [5555, 6666, 7777 , 8000];
+				var tabNoms = ["Aline", "Bob", "Cindy", "Dan"];
+				//alert( " la 1ère valeur du tableau TabNotes : " + tabNotes[0]);
+	
+				
+				// Ajoutez un étudiant
+				tabNotes.push(90.1);
+				//alert("La note ajoutée est : " + tabNotes[4]);
+				tabNumeros [4] = 9999;
+				//alert("La numéro ajouté est : " + tabNumeros[4]);
+				tabNoms[tabNoms.length] = "Edouard";
+				//alert("La nom ajouté est : " + tabNoms[4]);
+				// Demander le nom de l'étudiant
+				var nom = prompt("Entrer votre nom:" )
+				// Trouver le nom de l'étudiant
+				var indice = tabNoms.indexOf(nom);
+				alert("l’indice trouvé est : " + indice);
+				// Afficher les informations
+				if (indice < 0 || indice > tabNoms.length){
+					alert("Vous n’êtes pas dans notre base de donnée")
+				} else {
+					document.write("<h1>" + tabNoms[indice] + "</h1>");
+					document.write("<p>" + tabNumeros[indice] + "</p>");
+					document.write("<p>" + tabNotes[indice] + "</p>")
+				}
+				
+			}
+			
+	</script>
+
+	
+</head>
+<body>
+	<h1> Démo 6A #02 - Les tableaux</h1>
+	
+	<p onclick="maFonction();">Le script est exécuté lorsqu'on clique sur ce paragraphe</p> 
+	
+	<p onmouseenter="maFonction();"> ... ou quand la souris entre sur celui-ci</p> 
+	
+</body>
+</html>

@@ -1,0 +1,57 @@
+/* Paragraphes en bleu par défaut */
+
+p {
+   color: blue;
+}
+
+/* Nouvelles règles si la fenêtre fait au plus 1024px de large */
+
+@media screen and(max-width : 1024px) {
+   p {
+      color: red;
+
+      background-color: black;
+
+      font-size: 1.2em;
+   }
+}
+
+/* Masquer les éléments sur différentes tailles d'écran */
+div.cache {
+   background-color: yellow;
+   padding: 20px;
+}
+
+/* Si la taille de l'écran est inférieure ou égale à 600 px, masquez l'élément */
+
+@media screen and (max-width: 600px) {
+  
+}
+ div.cache {
+    display: none;
+ }
+
+
+/*lorsque la largeur du navigateur est comprise entre 600 et 900px, modifiez l'apparence d'un élément <div>: */
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  div.min_max_width {
+    font-size: 50px;
+    padding: 50px;
+    border: 8px solid black;
+    background: yellow;
+  }
+  
+}
+
+
+/*Lorsque la largeur est comprise entre 600px et 900px OU au-dessus de 1100px - changez l'apparence de <div> */
+
+@media screen and (max-width: 900px) and (min-width: 600px),(min-width:1100px) {
+  div.min_max_ou_width {
+    font-size: 50px;
+    padding: 50px;
+    border: 8px solid black;
+    background: yellow;
+  }  
+}
+

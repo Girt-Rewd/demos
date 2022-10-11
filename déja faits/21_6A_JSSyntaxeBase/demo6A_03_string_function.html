@@ -1,0 +1,83 @@
+<!--
+ *  Démonstration : Chapitre 6A #03
+ *  Description   : Pratiquer les fonctions et les événements en Javascript
+ *  Session       : A2022
+ *  Auteur        : 
+-->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Démo 6A, #03</title>
+
+	<style rel="stylesheet" type="text/css">
+		p {
+			background-color: lightgreen;
+			width: 10%;
+		}
+	</style>
+	<!--- Fonctions prêtes à être exécutées -->
+	<script>
+		// fonction de tests pour les string
+		function maFonction() {
+			var phraseA = "J'utilise Javascript pour augmenter l'interactivité de ma page Web";
+			// Afficher la phrase en majuscules
+			//alert(phraseA.toUpperCase());
+			// Afficher le premier et le dernier caractère
+			//alert("Premier caractère :"+phraseA.charAt(0));
+			//alert("Dernier caractère :"+phraseA.charAt(phraseA.length - 1));
+
+
+			// Afficher la position du mot Javascript
+			//alert("position : " + phraseA.indexOf('Javascript'));
+
+			// Afficher la phrase où les mots "J'utilise" ont été remplacés par les mots "Nous utilisons"
+			//alert("Nous vs J : " + phraseA.replace('J\'utilise', 'Nous utilisons'));
+			// Briser la phrase en un tableau où le séparateur est l'espace (et les apostrophes) ... afficher ce tableau et le 3e mot;
+			
+			var tabMots =  phraseA.replace("'", " ").split(" ");
+			alert("Le troisième mot est : " + tabMots[2]);
+			// Briser la phrase en un tableau où le séparateur est la lettre "a" ... afficher ce tableauet afficher le 3e "mot";
+
+		}
+		// Fonction qui affiche uneboite avec le caractère sur un nombre lignes et colonnes
+		function afficherBoite(nombreLignes, nombreColonnes, caractere) {
+			for (var i = 1; i <= nombreLignes; i++){
+				for (var j = 1; j <= nombreColonnes; j++){
+					document.write(caractere);
+				}
+				document.write("<br>");
+			}
+		}
+
+		// calculer la somme de N nombres où N est indéterminé
+		// ... le "tableau" "arguments" contient tous les paramètres
+		function calculerSomme() {
+
+			var i, somme = 0;
+			for (i = 0 ; i <arguments.length; i++){
+				somme += arguments[i];
+			}
+			alert(somme);
+		}
+	</script>
+
+
+</head>
+
+<body>
+	<h1> Démo 6A #03 - Les strings et fonctions</h1>
+
+	<p onclick="maFonction();">Cliquez sur ce paragraphe pour utiliser maFonction() qui teste les fonctions chaines de
+		caractères</p>
+
+	<input type="button" onclick="afficherBoite(3,5,'*')" value="afficherBoite(3,5,'*')" />
+
+	<input type="button" onclick="calculerSomme(3,5,6,7)" value="3+5+6+7" />
+
+	<input type="button" onclick="calculerSomme(3,5,6,7,9)" value="3+5+6+7+9" />
+
+</body>
+
+</html>

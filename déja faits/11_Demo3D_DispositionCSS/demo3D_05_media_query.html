@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+	Démo 3D #04 
+	Démo sur l'utilisation de @media
+	Date:  2020/02/11
+	Dini Ahamada
+	
+-->
+<html lang="fr">
+
+<head>
+	<title>Démo 3E#02</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="demo3D_05_media_query.css" />
+
+</head>
+
+<body>
+	<h1>Type d'écran</h1>
+
+
+
+	<h3>Utilisation d'un fichier css externe</h3>
+
+	<p>Je suis page qui permet de tester le media query <br />
+		Redimensionne la fenetre pour voir le changement</p>
+
+	<h2>Masquer les éléments sur différentes tailles d'écran</h2>
+	<p>Lorsque la largeur du navigateur est inférieure ou égale à 600 px, masquez l'élément div.
+		Redimensionnez la fenêtre du navigateur pour voir l'effet.</p>
+
+	<div class="cache">Ce DIV va être caché</div>
+
+
+
+	<h2>Vous pouvez également utiliser les valeurs (max-width: ..) et (min-width: ..) pour définir une largeur minimale
+		et une largeur maximale.</h2>
+	<p>Lorsque la largeur du navigateur est comprise entre 600 et 900 px, modifiez l'apparence de DIV.
+		<strong>Redimensionnez la fenêtre du navigateur pour voir l'effet</strong>.
+	</p>
+	<div class="min_max_width">la largeur du navigateur est comprise entre 600 et 900 px</div>
+	<h2>Utiliser une valeur supplémentaire</h2>
+	<p>Lorsque la largeur du navigateur est comprise entre 600 et 900 pixels OU supérieure à 1 100 pixels, modifiez
+		l'apparence de DIV.</p>
+	<div class="min_max_ou_width">la largeur du navigateur est comprise entre 600 et 900px OU supérieure à 1 100px</div>
+</body>
+
+</html>

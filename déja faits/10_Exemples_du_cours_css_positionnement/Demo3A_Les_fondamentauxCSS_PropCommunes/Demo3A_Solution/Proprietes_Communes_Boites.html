@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Propriétés communes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!--Dimension 	-->
+  <h1>Réglage de la hauteur et de la largeur</h1>
+
+  <div class="par_defaut">
+
+    En fixant les dimensions d'un élément, il restera fixe quelle que soit la longueur de son contenu.
+    La propriété CSS overflow nous permet de gérer le cas d'un contenu plus long que son conteneur.
+
+  </div>
+
+  <h2> La valeur par défaut est visible: le contenu sera affiché de toute façon : </h2>
+  <div class="visible">
+
+    En fixant les dimensions d'un élément, il restera fixe quelle que soit la longueur de son contenu.
+    La propriété CSS overflow nous permet de gérer le cas d'un contenu plus long que son conteneur.
+
+  </div>
+
+  <h2> En appliquant overflow: hidden ;, vous interdisez simplement tout contenu débordant d'être vu : </h2>
+  <div class="hidden">
+
+    En fixant les dimensions d'un élément, il restera fixe quelle que soit la longueur de son contenu.
+    La propriété CSS overflow nous permet de gérer le cas d'un contenu plus long que son conteneur.
+
+
+
+  </div>
+  <h2>Si vous souhaitez que votre contenu déborde mais que vous souhaitiez le rendre accessible,
+    vous pouvez décider d'appliquer overflow: scroll : </h2>
+
+  <div class="scroll">
+
+    En fixant les dimensions d'un élément, il restera fixe quelle que soit la longueur de son contenu.
+    La propriété CSS overflow nous permet de gérer le cas d'un contenu plus long que son conteneur.
+
+
+
+  </div>
+  <h2>Une meilleure option est overflow: auto, car les barres de défilement
+    n'apparaîtront que si le contenu déborde, mais restera caché jusque-là.</h2>
+
+
+  <div class="auto">
+
+    En fixant les dimensions d'un élément, il restera fixe quelle que soit la longueur de son contenu.
+    La propriété CSS overflow nous permet de gérer le cas d'un contenu plus long que son conteneur.
+
+  </div>
+
+  <h2>Les barres de défilement restent cachés</h2>
+  <div class="auto1">
+
+    En fixant les dimensions d'un élément, il restera fixe quelle que soit la longueur de son contenu.
+    La propriété CSS overflow nous permet de gérer le cas d'un contenu plus long.
+
+  </div>
+
+  <!--  Bordure  -->
+  <h1>Bordure</h1>
+
+  <h3><dfn>Border:</dfn>parce qu'un élément HTML est rendu sous la forme d'un rectangle, il peut avoir jusqu'à 4
+    bordures: haut, bas,
+    gauche et droite. Vous pouvez définir une bordure de tous les côtés à la fois, ou de chaque côté individuellement.
+  </h3>
+
+
+  <div class="bordure">
+
+    En fixant les dimensions d'un élément, il restera fixe quelle que soit la longueur de son contenu.
+    La propriété CSS overflow nous permet de gérer le cas d'un contenu plus long que son conteneur.
+
+  </div>
+  <h3> <dfn>Padding:</dfn>ajoute de l'espace à l'intérieur d'un élément (entre sa bordure et son contenu)</h3>
+  <div class="bordure_espace_interieur">
+    En fixant les dimensions d'un élément, il restera fixe quelle que soit la longueur de son contenu.
+    La propriété CSS overflow nous permet de gérer le cas d'un contenu plus long que son conteneur.
+
+  </div>
+  <h3> <dfn>Margin: les marges ajoutent
+      de l'espace à l'extérieur entre un élément et d'autres éléments</dfn></h3>
+  <div class="bordure_espace_exterieur">
+    En fixant les dimensions d'un élément, il restera fixe quelle que soit la longueur de son contenu.
+    La propriété CSS overflow nous permet de gérer le cas d'un contenu plus long que son conteneur.
+
+  </div>
+
+  <!--  Margin  -->
+  <h1>Margin : auto</h1>
+
+  <div id="main"> Attribuer une width à un élément block-level l'empêchera de s'étirer sur toute la largeur de son
+    conteneur. Ensuite vous pouvez mettre la valeur auto aux propriétés margin-right et margin-left pour centrer
+    horizontallement cet élément à l'intérieur de son conteneur. L'élément prendra la largeur que vous avez spécifié et
+    l'espace restant sera séparé équitablement entre les deux marges.
+
+    Le seul problème survient lorsque la fenêtre du navigateur est plus petite que la largeur de votre élément. Le
+    navigateur résout cela en créant une barre de défilement (scrollbar) horizontale. Améliorons cette situation.</div>
+  <h1>Margin : max-width</h1>
+  <div id="max-width">
+    Utiliser max-width à la place de width améliorera la gestion des petites fenêtres. C'est très important lorsque l'on
+    créé un site accessible sur mobile. Redimensionnez cette page pour voir !
+
+    Au fait, max-width est supporté par tous les navigateurs majeurs incluant IE7+, vous ne devez donc pas avoir peur de
+    l'utiliser.
+  </div>
+
+  <h1>box model</h1>
+  <article>Si nous parlons de la propriété width, nous devrions parler du box model. Quand vous ajustez la propriété
+    width
+    d'un élément, celui-ci peut paraître plus gros que ce que vous avez indiqué : la bordure et le padding de l'élément
+    l'étirent au delà de la largeur spécifiée. Regardez l'exemple suivant, où deux éléments ayant la même largeur se
+    retrouvent avec deux tailles différentes.</article>
+
+  <div class="petit">
+    Je suis plus petit...
+  </div>
+  <div class="grand">
+    Et je suis plus grand !
+  </div>
+
+  <!--  Display    -->
+  <h1>Display</h1>
+  <article> la propriété "display"
+
+    La propriété CSS display est la plus importante pour contrôler la mise en page. Chaque élément à une valeur display
+    par défaut dépendante du type de l'élément. Les valeurs par défaut de la plupart des éléments sont block ou inline.
+    Un élément block est souvent appelé un élément block-level. Un élément inline n'est jamais appelé autrement qu'un
+    élément inline</article>
+
+  <ul class="menu">
+    <li>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>Features</a>
+    </li>
+    <li>
+      <a>Pricing</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+  </ul>
+
+  <ul class="menu_bloc">
+    <li>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>Features</a>
+    </li>
+    <li>
+      <a>Pricing</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+  </ul>
+
+  <ul class="menu_inline">
+    <li>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>Features</a>
+    </li>
+    <li>
+      <a>Pricing</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+  </ul>
+
+  <h2>Supprimer l'element avec display : non </h2>
+
+  <p> Premier p : J existe ?</p>
+  <p class="supprimer"> Deuxieme : Je n'existe plus</p>
+  <p> Troisiement p : J existe aussi</p>
+
+
+  <h2>Masquer l'element avec visibility : hidden </h2>
+
+  <p> Premier p : Je suis visible ?</p>
+  <p class="invisible"> Deuxieme : Je suis invisible</p>
+  <p> Troiiement p : Je suis aussi visible</p>
+
+  <!--  Position  -->
+  <h1>Position</h1>
+  <div> La propriété de position CSS est polyvalente et puissante. Cela permet de définir ou de modifier la position
+    d'un élément. Il a 4 valeurs possibles:</div>
+
+  <ol>
+    <li>
+      static (default value)
+    </li>
+    <li>
+      relative
+    </li>
+    <li>
+      absolute
+    </li>
+    <li>
+      fixed
+    </li>
+  </ol>
+
+  <div> Il est souvent utilisé aux côtés des 4 propriétés de coordonnées:</div>
+
+  <ol>
+    <li>
+      left
+    </li>
+    <li>
+      right
+    </li>
+    <li>
+      top
+    </li>
+    <li>
+      bottom
+    </li>
+  </ol>
+  <h2>Relative </h2>
+  <div> Lorsque la position est relative, un élément peut se déplacer en fonction de sa position actuelle.</div>
+
+  <p> Premier paragraphe : J existe ?</p>
+  <p class="deuxième"> Deuxieme paragraphe : Je n'existe plus</p>
+  <p> Troisiement pparagraphe : J existe aussi</p>
+
+
+  <h2>Déplaçons le deuxième paragraphe: avec la propriete relative </h2>
+
+  <p> Premier paragraphe : J existe ?</p>
+  <p class="deuxième_relative"> Deuxieme paragraphe : Je n'existe plus</p>
+  <p> Troisiement pparagraphe : J existe aussi</p>
+  <h2>Absolute </h2>
+  <div> Lorsque la position est définie sur absolu, un élément peut se déplacer en fonction du premier ancêtre
+    positionné.</div>
+  <div> La caractéristique d'un élément positionné est qu'il peut agir comme un point de référence pour ses éléments
+    enfants.</div>
+  <div> Imaginons une hiérarchie simple: </div>
+  <section>
+
+    Je suis dans une position relative.
+
+
+    <p class="absolu">
+      Je suis dans une position absolute!
+    </p>
+    <p class="fixed"> Je suis dans une position fixed!.</p>
+  </section>
+
+  <h2>Fixed</h2>
+  <div>Lorsque la position est mis à fixed, il agit comme absolu: vous pouvez définir les coordonnées
+    gauche / droite et
+    haut / bas.
+
+    La seule différence est que le point de référence est la fenêtre. Cela signifie qu'un élément fixe ne défilera pas
+    avec la page; il est fixé sur l'écran.</div>
+
+
+  <!--  Float    -->
+  <h1>Float</h1>
+
+  <div> Utilisation de float modifie non seulement l'élément sur lequel il est appliqué, mais modifie également ses
+    ancêtres, ses frères et sœurs, ses descendants et les éléments suivants.</div>
+  <div> Le but d'appliquer float a un élément est de le pousser d'un côté et de le faire s'enrouler autour du texte.
+  </div>
+  <div> Float est prévu pour entourer une image avec du texte.</div>
+  <div> Ce que nous voulons, c'est enrouler le texte autour de l'image:</div>
+  <h2>Float:left</h2>
+  <article>
+    <img class="float_gauche" src="images/img0.png">
+    The bells of the neighbouring church made a jangling tumult, a cart carelessly driven smashed, amid shrieks and
+    curses, against the water trough up the street. Sickly yellow lights went to and fro in the houses, and some of the
+    passing cabs flaunted unextinguished lamps. And overhead the dawn was growing brighter, clear and steady and calm.
+    The bells of the neighbouring church made a jangling tumult, a cart carelessly driven smashed, amid shrieks and
+    curses, against the water trough up the street. Sickly yellow lights went to and fro in the houses, and some of the
+    passing cabs flaunted unextinguished lamps. And overhead the dawn was growing brighter, clear and steady and calm.
+    The bells of the neighbouring church made a jangling tumult, a cart carelessly driven smashed, amid shrieks and
+    curses, against the water trough up the street. Sickly yellow lights went to and fro in the houses, and some of the
+    passing cabs flaunted unextinguished lamps. And overhead the dawn was growing brighter, clear and steady and calm.
+  </article>
+  <h2>Float:right</h2>
+  <article>
+    <img class="float_droit" src="images/img0.png">
+    The bells of the neighbouring church made a jangling tumult, a cart carelessly driven smashed, amid shrieks and
+    curses, against the water trough up the street. Sickly yellow lights went to and fro in the houses, and some of the
+    passing cabs flaunted unextinguished lamps. And overhead the dawn was growing brighter, clear and steady and calm.
+    The bells of the neighbouring church made a jangling tumult, a cart carelessly driven smashed, amid shrieks and
+    curses, against the water trough up the street. Sickly yellow lights went to and fro in the houses, and some of the
+    passing cabs flaunted unextinguished lamps. And overhead the dawn was growing brighter, clear and steady and calm.
+    The bells of the neighbouring church made a jangling tumult, a cart carelessly driven smashed, amid shrieks and
+    curses, against the water trough up the street. Sickly yellow lights went to and fro in the houses, and some of the
+    passing cabs flaunted unextinguished lamps. And overhead the dawn was growing brighter, clear and steady and calm.
+  </article>
+
+  <div> Comme vous pouvez le voir, l'image est poussée vers la gauche/droite, et le texte qui suit entoure simplement
+    l'image
+  </div>
+
+
+  <h2>Clear</h2>
+  <div>
+    La propriété clear spécifie ce qui doit se passer avec l'élément qui est à côté d'un élément flottant</div>
+  <img class="float" src="images/img0.png">
+  <article class="clear">
+
+    The bells of the neighbouring church made a jangling tumult, a cart carelessly driven smashed, amid shrieks and
+    curses, against the water trough up the street. Sickly yellow lights went to and fro in the houses, and some of the
+    passing cabs flaunted unextinguished lamps. And overhead the dawn was growing brighter, clear and steady and calm.
+    The bells of the neighbouring church made a jangling tumult, a cart carelessly driven smashed, amid shrieks and
+    curses, against the water trough up the street. Sickly yellow lights went to and fro in the houses, and some of the
+    passing cabs flaunted unextinguished lamps. And overhead the dawn was growing brighter, clear and steady and calm.
+    The bells of the neighbouring church made a jangling tumult, a cart carelessly driven smashed, amid shrieks and
+    curses, against the water trough up the street. Sickly yellow lights went to and fro in the houses, and some of the
+    passing cabs flaunted unextinguished lamps. And overhead the dawn was growing brighter, clear and steady and calm.
+  </article>
+
+  <!--  Pseudo classe : hover   		-->
+  <h1>Pseudo classe : hover</h1>
+
+  <div> une pseudo-classe commune utilisée est: hover, qui appliquera un style CSS lorsque l'élément ciblé est survolé.
+    Testons-le sur les liens.</div>
+
+  <a href="">Lien survolé en rouge</a>
+
+  <h1>Pseudo classe : visited</h1>
+  <div>Cette pseudo-classe cible les liens qui ont été visités. Par défaut, les liens sont bleus et deviennent violets
+    lorsque vous les avez visités. Les résultats de Google fonctionnent comme ça</div>
+
+
+  <a href="https://www.google.com">Google</a>
+  <a href="https://twitter.com">Twitter</a>
+  <a href="https://www.facebook.com">Facebook</a>
+  <a href="https://www.mozilla.org">Mozilla</a>
+  <a href="https://marksheet.io/visited.html">MarkSheet</a>
+
+</body>
+
+</html>

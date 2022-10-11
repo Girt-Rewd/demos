@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Javascript</title>
+    <!-- Utilisation de JS dans un fichier externe -->
+
+    <!-- 
+        <script src="demo06JS/demo06_00.js">
+            // afficher message dans une boite de dialogue
+            /*window.alert("Test01");
+            alert("Test02");*/
+        </script>
+     -->
+
+</head>
+<body>
+    <h1>Notions de base JS</h1>
+    <p>Le script est exécuté une fois automatiquement après l’affichage du paragraphe</p>
+    <script>
+        // Afficher un message dans une boite de dialogue
+
+        //alert("Test05");
+        
+        //console.log("TestAffichageConsole");
+        
+        // Afficher du texte sur la page Web
+        //document.write("TestAffichageDocumentWrite <br>");
+        
+        // Pour obtenir  une valeur avec une boite de dialogue 
+        // on utitiles la muthode prompt() , qui renvoie l vleur saisie
+        // Si l’utilisateur clique 'annuler' la méthode nemvoie null;
+
+        //var resultat = window.prompt("TestAfficheWindowPrompt","Text");
+        /* var resultat = prompt("TestAfficheWindowPrompt","Text");
+        document.write("vous avez saisi " + resultat); */
+
+        // concaténation
+
+        // déclaration explicite
+        /* var max_age = 18;
+        //déclaration implicite
+        message = " non permis mois " + max_age + " ans";
+        alert(message); */
+        
+        /* 
+        var myVar1 = " Je suis un string";
+        var myVar2 = "Suis-je vraiment un string?";
+        myVar2 = 100;
+
+        document.write("<br> ");
+        document.write(typeof(myVar1));
+        document.write("<br> ");
+        document.write(typeof(myVar2)); */
+
+        /* // les fonctions de conversion sont String() et Number()
+        var chaine ="123.45";
+        var nombre = Number(chaine);
+        document.write("<p>il s'agit de " + nombre + " " + typeof(nombre) +"</p>");
+
+        var nombre = 123.45;
+        var chaine = String(nombre);
+         document.write("<p>il s'agit de " + chaine + " " + typeof(chaine)+"</p>");*/
+
+        // les conditions 
+
+        /* // if else if else
+        var age = prompt ("Saisir votre âge", "");
+        coutBillet = 100;
+        if (age <18){
+            alert("Enfant");
+            coutBillet -= 10;
+
+        } else if (age > 65){
+            alert("Ainé");
+            coutBillet -=5;
+        } else {
+            alert("Adulte");
+        } */
+
+        // switch
+         var code = prompt("Saisir le code", " ");
+        //document.write("<br>" + typeof(code));
+         code = Number(code);
+         switch (code) {
+            case 1:
+                alert("Code 1");
+                break;
+            
+            default:
+                alert("Code choisi autre que 1")
+                break;
+         }
+
+
+    </script>
+</body>
+</html>
